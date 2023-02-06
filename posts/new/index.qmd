@@ -1,17 +1,23 @@
 ---
 title: "Notes for class"
 author: "Shifa"
-image: "image.jpg"
+image: "R logo.png"
 ---
 
--Learn more about push and pull about git
+![](R%20logo.png){width="180"}
 
--make a change, commit and push the change.
+-   Learn more about push and pull about git
 
-Make changes to you to ur file.
+-   make a change, commit and push the change.
 
-Render your websites.
+-   Make changes to you to ur file.
 
-Commit the changes.
+-   Render your websites.
 
-Push to the origin
+-   Commit the changes.
+
+-   Push to the origin
+
+-   Rstudio IDE is a great resource.
+
+-   A reproducible report allows others to understand and check your work.
