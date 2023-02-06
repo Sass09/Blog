@@ -1,6 +1,17 @@
 ---
 title: "Notes for class"
+author: "Shifa"
 image: "image.jpg"
 ---
 
 -Learn more about push and pull about git
+
+-make a change, commit and push the change.
+
+Make changes to you to ur file.
+
+Render your websites.
+
+Commit the changes.
+
+Push to the origin
