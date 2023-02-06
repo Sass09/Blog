@@ -1,9 +1,6 @@
 ---
-title: "Post With Code"
-author: "Harlow Malloc"
-date: "2023-02-02"
-categories: [news, code, analysis]
+title: "Notes for class"
 image: "image.jpg"
 ---
 
-This is going to be my class blog.
+-Learn more about push and pull about git
