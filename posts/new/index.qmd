@@ -21,3 +21,5 @@ image: "R logo.png"
 -   Rstudio IDE is a great resource.
 
 -   A reproducible report allows others to understand and check your work.
+
+- 
