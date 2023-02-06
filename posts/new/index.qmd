@@ -22,4 +22,6 @@ image: "R logo.png"
 
 -   A reproducible report allows others to understand and check your work.
 
-- 
+-   never install a package inside of the script
+
+-   there is another easy way to use a function. You can simply use package::function()
