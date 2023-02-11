@@ -25,3 +25,13 @@ image: "R logo.png"
 -   never install a package inside of the script
 
 -   there is another easy way to use a function. You can simply use package::function()
+
+-   Whenever you put comma in a function, it means you are giving different arguments to it. For example, mean(x=1,2,3,4,5) means more than one argument
+
+-   c() function has many uses
+
+-   Assigning things to our objects "\<-"
+
+-   as.numeric turns strings into numbers
+
+-   

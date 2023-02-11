@@ -23,7 +23,7 @@
   {
     "objectID": "about.html",
     "href": "about.html",
-    "title": "About",
+    "title": "Data Analytics Blog",
     "section": "",
     "text": "About this blog"
   },
@@ -32,6 +32,6 @@
     "href": "posts/new/index.html",
     "title": "Notes for class",
     "section": "",
-    "text": "Learn more about push and pull about git\nmake a change, commit and push the change.\nMake changes to you to ur file.\nRender your websites.\nCommit the changes.\nPush to the origin\nRstudio IDE is a great resource.\nA reproducible report allows others to understand and check your work.\nnever install a package inside of the script\nthere is another easy way to use a function. You can simply use package::function()"
+    "text": "Learn more about push and pull about git\nmake a change, commit and push the change.\nMake changes to you to ur file.\nRender your websites.\nCommit the changes.\nPush to the origin\nRstudio IDE is a great resource.\nA reproducible report allows others to understand and check your work.\nnever install a package inside of the script\nthere is another easy way to use a function. You can simply use package::function()\nWhenever you put comma in a function, it means you are giving different arguments to it. For example, mean(x=1,2,3,4,5) means more than one argument"
   }
 ]
