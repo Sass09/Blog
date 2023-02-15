@@ -33,5 +33,3 @@ image: "R logo.png"
 -   Assigning things to our objects "\<-"
 
 -   as.numeric turns strings into numbers
-
--   

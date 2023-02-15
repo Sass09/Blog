@@ -18,14 +18,14 @@
     "href": "index.html",
     "title": "Blog",
     "section": "",
-    "text": "Notes for class\n\n\n\n\n\n\n\n\n\n\n\n\nShifa\n\n\n\n\n\n\n  \n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nJan 30, 2023\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
+    "text": "week 3 qmd skill check\n\n\n\n\n\n\n\n\n\n\n\n\nShifa Maqsood\n\n\n\n\n\n\n  \n\n\n\n\nNotes for class\n\n\n\n\n\n\n\n\n\n\n\n\nShifa\n\n\n\n\n\n\n  \n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nJan 30, 2023\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
     "href": "about.html",
     "title": "Data Analytics Blog",
     "section": "",
-    "text": "About this blog"
+    "text": "This blog is for weekly assignments"
   },
   {
     "objectID": "posts/new/index.html",
@@ -33,5 +33,26 @@
     "title": "Notes for class",
     "section": "",
     "text": "Learn more about push and pull about git\nmake a change, commit and push the change.\nMake changes to you to ur file.\nRender your websites.\nCommit the changes.\nPush to the origin\nRstudio IDE is a great resource.\nA reproducible report allows others to understand and check your work.\nnever install a package inside of the script\nthere is another easy way to use a function. You can simply use package::function()\nWhenever you put comma in a function, it means you are giving different arguments to it. For example, mean(x=1,2,3,4,5) means more than one argument"
+  },
+  {
+    "objectID": "posts/week 3 qmd skills /index.html",
+    "href": "posts/week 3 qmd skills /index.html",
+    "title": "Week 3 qmd skills",
+    "section": "",
+    "text": "Be able to make a new .qmd document\nBe able to render a .qmd document\nBe able to insert simple markdown plain text (headers, lists, paragraphs), and render the document.\n\n#This is a first level header ##This is a second level header 4. Be aware of resources to help you learn more about markdown options. 5. Be able to insert an R code chunk, and show the output in the rendered document. - macro for quick insert 6. Running R code chunks in a qmd - pressing play - copy/paste into console - highlight then command-enter (mac) - precedence issues (first to last) 7. Be aware of R code chunk options, and how to use eval, messages, error, warning, and echo. 8. Be able to set code chunk options per chunk, and/or for the whole document. Understand rules for precedence (which options will apply if both are set.) 9. Write inline r code. 10. Explain how the rendering environment is different from the Rstudio environment. 11. Be aware of more advanced quarto options for html documents, and try some of the options."
+  },
+  {
+    "objectID": "posts/Tipsheet post /index.html",
+    "href": "posts/Tipsheet post /index.html",
+    "title": "Notes for class",
+    "section": "",
+    "text": "Learn more about push and pull about git\nmake a change, commit and push the change.\nMake changes to you to ur file.\nRender your websites.\nCommit the changes.\nPush to the origin\nRstudio IDE is a great resource.\nA reproducible report allows others to understand and check your work.\nnever install a package inside of the script\nthere is another easy way to use a function. You can simply use package::function()\nWhenever you put comma in a function, it means you are giving different arguments to it. For example, mean(x=1,2,3,4,5) means more than one argument\nc() function has many uses\nAssigning things to our objects “<-”\nas.numeric turns strings into numbers"
+  },
+  {
+    "objectID": "posts/week 3 qmd skills /week 3 qmd skill check.html",
+    "href": "posts/week 3 qmd skills /week 3 qmd skill check.html",
+    "title": "week 3 qmd skill check",
+    "section": "",
+    "text": "Be able to make a new .qmd document\nBe able to render a .qmd document\nBe able to insert simple markdown plain text (headers, lists, paragraphs), and render the document.\nBe aware of resources to help you learn more about markdown options.\nBe able to insert an R code chunk, and show the output in the rendered document.\n\n\nmacro for quick insert\n\nDone below\n\nRunning R code chunks in a qmd\n\n\npressing play\ncopy/paste into console\nhighlight then command-enter (mac)\nprecedence issues (first to last)\n\n\nBe aware of R code chunk options, and how to use eval, messages, error, warning, and echo.\nBe able to set code chunk options per chunk, and/or for the whole document. Understand rules for precedence (which options will apply if both are set.)\nWrite inline r code.\nExplain how the rendering environment is different from the Rstudio environment.\nBe aware of more advanced quarto options for html documents, and try some of the options.\n\n\na<- c(4,6,7,7)\nmean(a)\n\n[1] 6"
   }
 ]

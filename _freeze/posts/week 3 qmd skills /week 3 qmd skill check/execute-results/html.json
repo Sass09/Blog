@@ -1,0 +1,14 @@
+{
+  "hash": "f34631f839ce9c06b25d85ed51516090",
+  "result": {
+    "markdown": "---\ntitle: \"week 3 qmd skill check\"\nauthor: Shifa Maqsood\n---\n\n\n1. Be able to make a new .qmd document\n\n\n2. Be able to render a .qmd document\n3. Be able to insert simple markdown plain text (headers, lists, paragraphs), and render the document.\n4. Be aware of resources to help you learn more about markdown options.\n5. Be able to insert an R code chunk, and show the output in the rendered document.\n - macro for quick insert\n \n **Done below**\n \n6. Running R code chunks in a qmd\n  - pressing play\n  - copy/paste into console\n  - highlight then command-enter (mac) \n  - precedence issues (first to last)\n7. Be aware of R code chunk options, and how to use eval, messages, error, warning, and echo.\n8. Be able to set code chunk options per chunk, and/or for the whole document. Understand rules for precedence (which options will apply if both are set.)\n9. Write inline r code.\n10. Explain how the rendering environment is different from the Rstudio environment.\n11. Be aware of more advanced quarto options for html documents, and try some of the options.\n\n::: {.cell}\n\n```{.r .cell-code}\na<- c(4,6,7,7)\nmean(a)\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n[1] 6\n```\n:::\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
