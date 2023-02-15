@@ -5,33 +5,55 @@ author: Shifa Maqsood
 
 1. Be able to make a new .qmd document
 
+  Yes 
+I copied my welcome post, and then renamed it
 
 2. Be able to render a .qmd document
+  I was able yo do that
+  
 3. Be able to insert simple markdown plain text (headers, lists, paragraphs), and render the document.
+
+#This is a Header
+~~strikethrough~~
+
+**this is bold text**
+
+<https://quarto.org>
+
+* unordered list
+    + sub-item 1
+    + sub-item 2
+        - sub-sub-item 1
+
+
 4. Be aware of resources to help you learn more about markdown options.
+
+Yes
+
 5. Be able to insert an R code chunk, and show the output in the rendered document.
  - macro for quick insert
- command-option-i
-```{r}
-
-```
  
- **Done below**
+ **command-option-i**
  
-6. Running R code chunks in a qmd
-  - pressing play
-  - copy/paste into console
-  - highlight then command-enter (mac) 
-  - precedence issues (first to last)
-7. Be aware of R code chunk options, and how to use eval, messages, error, warning, and echo.
-8. Be able to set code chunk options per chunk, and/or for the whole document. Understand rules for precedence (which options will apply if both are set.)
-9. Write inline r code.
-10. Explain how the rendering environment is different from the Rstudio environment.
-11. Be aware of more advanced quarto options for html documents, and try some of the options.
 ```{r}
 a<- c(4,6,7,7)
 mean(a)
 
 ```
+ 
+ 
+6. Running R code chunks in a qmd
+  - pressing play-Yes
+  - copy/paste into console -Done
+  - highlight then command-enter (mac) 
+  - precedence issues (first to last)
+
+7. Be aware of R code chunk options, and how to use eval, messages, error, warning, and echo.
+
+8. Be able to set code chunk options per chunk, and/or for the whole document. Understand rules for precedence (which options will apply if both are set.)
+
+9. Write inline r code.
+10. Explain how the rendering environment is different from the Rstudio environment.
+11. Be aware of more advanced quarto options for html documents, and try some of the options.
 
 
