@@ -1,59 +1,75 @@
 ---
-title: "week 3 qmd skill check"
+title: "Week 3 qmd skill check"
 author: Shifa Maqsood
 ---
 
-1. Be able to make a new .qmd document
+1.\ Be able to make a new .qmd document
 
-  Yes 
-I copied my welcome post, and then renamed it
+    Yes.I copied my welcome post, and then renamed it
 
-2. Be able to render a .qmd document
-  I was able yo do that
+2.\ Be able to render a .qmd document
+ 
+    I was able to do that
   
-3. Be able to insert simple markdown plain text (headers, lists, paragraphs), and render the document.
+3.\ Explain the difference between the source editor view and visual editor view in Rstudio.
 
-#This is a Header
-~~strikethrough~~
+     Source editor is where you usually do coding so it is more      like the underlying code , and visual editor kind of already     shows how the ouput will look like on webpage and it can be       confusing for a beginner
 
-**this is bold text**
+4.\ Be able to insert simple markdown plain text (headers, lists, paragraphs), and render the document.
 
-<https://quarto.org>
+    #This is a Header
 
-* unordered list
+    ~~strikethrough~~
+
+   **this is bold text**
+
+   <https://quarto.org>
+
+    * unordered list
     + sub-item 1
     + sub-item 2
         - sub-sub-item 1
 
+5.\ Be aware of resources to help you learn more about markdown options.
 
-4. Be aware of resources to help you learn more about markdown options.
+    Yes
 
-Yes
-
-5. Be able to insert an R code chunk, and show the output in the rendered document.
+6.\ Be able to insert an R code chunk, and show the output in the rendered document.
  - macro for quick insert
  
- **command-option-i**
+    **command-option-i**
  
-```{r}
+```{r echo=FALSE} 
 a<- c(4,6,7,7)
 mean(a)
 
 ```
  
  
-6. Running R code chunks in a qmd
-  - pressing play-Yes
-  - copy/paste into console -Done
-  - highlight then command-enter (mac) 
-  - precedence issues (first to last)
+7.\ Running R code chunks in a qmd
+  - pressing play- **Yes**
+  - copy/paste into console - **Done**
+  - highlight then command-enter (mac) **yes**
+  - precedence issues (first to last) **yes**
 
-7. Be aware of R code chunk options, and how to use eval, messages, error, warning, and echo.
-
-8. Be able to set code chunk options per chunk, and/or for the whole document. Understand rules for precedence (which options will apply if both are set.)
-
-9. Write inline r code.
-10. Explain how the rendering environment is different from the Rstudio environment.
-11. Be aware of more advanced quarto options for html documents, and try some of the options.
+8.\ Be aware of R code chunk options, and how to use eval, messages, error, warning, and echo.
+   
+    Yes. I used echo in the code chunk above.
 
 
+9.\ Be able to set code chunk options per chunk, and/or for the whole document. Understand rules for precedence (which options will apply if both are set.)
+
+  There is a couple of code chunks options that you can use for    some for example eval=false can be used to just display the      function and not evaluate. You can also have a code chunk at     the top of the document as well.
+
+10.\ Write inline r code.
+
+    Today's date is `r Sys.Date()`
+
+11.\ Explain how the rendering environment is different from the Rstudio environment.
+  
+    Rstudio environment is more like about how it would look as a     website, but Rstudio environment shows all the values and the     objects assigned to them.
+
+
+12.\ Be aware of more advanced quarto options for html documents, and try some of the options.
+
+    **Yes**
