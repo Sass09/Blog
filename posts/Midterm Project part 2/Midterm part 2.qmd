@@ -45,7 +45,7 @@ List the numbers from 1 to 100 with the following constraints.
 ```{r}
 a <- c(1:100)
 for (i in a){
-  
+  p
 }
 
 
