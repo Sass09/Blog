@@ -3,12 +3,10 @@ title: "Midterm Part 2"
 autor: "Shifa Maqsood"
 image: "Unknown.png"
 ---
-#Easy problem
 
-Problem 1:
-List all of the odd numbers from 1 to 100.
-you could use the seq() function
-How could you do this without using the seq() function? Consider using the mod function %%, which evaluates whether or not there is a remainder when dividing one number by another.
+#Easier problems
+
+Problem 1: List all of the odd numbers from 1 to 100. you could use the seq() function How could you do this without using the seq() function? Consider using the mod function %%, which evaluates whether or not there is a remainder when dividing one number by another.
 
 ```{r}
 for (i in 1:100){
@@ -19,29 +17,27 @@ for (i in 1:100){
 
 ```
 
-Problem 2 :
-Generate 100 random numbers within a specific range
-runif can do this
+Problem 2 : Generate 100 random numbers within a specific range runif can do this
+
 ```{r}
 
 runif(100,1,100)
 
 ```
 
-Problem 3:
-Create a variable that stores a 20x20 matrix of random numbers
+Problem 3: Create a variable that stores a 20x20 matrix of random numbers
+
 ```{r}
 random_num <-matrix(runif(400, min=3,max=45), nrow = 20, ncol=20)
 
 
 ```
 
-#Harder probelms
+#Harder problems
 
-Problem 1:
-FizzBuzz
-List the numbers from 1 to 100 with the following constraints.
+Problem 1: FizzBuzz List the numbers from 1 to 100 with the following constraints.
 
+This question can be solved using for loop. 
 ```{r}
 a <- c(1:100)
 for (i in a){
