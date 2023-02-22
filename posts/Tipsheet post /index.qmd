@@ -4,8 +4,6 @@ author: "Shifa Maqsood"
 image: "R logo.png"
 ---
 
-![](R%20logo.png){width="180"}
-
 -   Learn more about push and pull about git
 
 -   make a change, commit and push the change.

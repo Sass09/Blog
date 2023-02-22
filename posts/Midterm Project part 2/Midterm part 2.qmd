@@ -66,8 +66,7 @@ hist(a)
 
 ```
 
-Problem 3: 
-Assume that a pair of dice are rolled. Using monte carlo-simulation, compute the probabilities of rolling a 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, and 12, respectively.
+Problem 3: Assume that a pair of dice are rolled. Using monte carlo-simulation, compute the probabilities of rolling a 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, and 12, respectively.
 
 ```{r}
 
@@ -79,8 +78,8 @@ sim <- table(combined)/1000
 
 ```
 
-Problem 4:
-Multiplication table
+Problem 4: Multiplication table
+
 ```{r}
 
 
