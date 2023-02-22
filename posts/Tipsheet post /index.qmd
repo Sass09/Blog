@@ -1,6 +1,6 @@
 ---
 title: "Notes for class"
-author: "Shifa"
+author: "Shifa Maqsood"
 image: "R logo.png"
 ---
 
