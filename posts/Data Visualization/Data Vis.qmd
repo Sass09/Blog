@@ -1,0 +1,14 @@
+---
+title: "Data Vis"
+author: Shifa Maqsood
+---
+
+```{r}
+survey_data <- read_csv("https://psyteachr.github.io/ads-v2/data/survey_data.csv")
+
+
+
+
+
+
+```

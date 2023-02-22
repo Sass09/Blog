@@ -1,0 +1,14 @@
+{
+  "hash": "97b8a0211f1bddafd86e9e56a8eb5043",
+  "result": {
+    "markdown": "---\ntitle: \"Midterm project part 1\"\nauthor: \"Shifa Maqsood\"\n---\n\n\nQ. Write a blog post where you demonstrate your ability to use these basic programming concepts in R.\n\n**1.**  R objects: show that you understand and can create/use objects of various types, including at least: character/string, numeric, integer, logical, data.frame, and list. Show that you can index objects appropriately (e.g., locate elements of an object, change elements of an object etc.)\n\n**2.**  Logical operations: show that you understand and can use logical operators in R (e.g., == \\| \\> \\< \\>= \\<=)\n\n\n**3.**  Loops: Show that you understand the components of a for loop, and that you can use a for loop.\n\nThere are three types of loops, for loop, while loop and repeat loops. \nFor loop is the commonly used loop.\nThe syntax is \n\n\n\n::: {.cell}\n\n```{.r .cell-code}\nj <- c(3,6,7,8)\nfor (i in j ){\n  i<- i^2 \n  print(i)\n}\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n[1] 9\n[1] 36\n[1] 49\n[1] 64\n```\n:::\n:::\n\n\n**4.** Functions: Show that you understand the syntax for declaring your own function, and that you can declare and run your own custom function to accomplish some task (you choose what the function does).\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

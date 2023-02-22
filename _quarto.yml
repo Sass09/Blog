@@ -2,18 +2,17 @@ project:
   type: website
   output-dir: docs
 website:
-  title: "Blog"
+  title: posts
   navbar:
-    right:
+    left:
       - about.qmd
       - icon: github
-        href: https://github.com/
-      - icon: twitter
-        href: https://twitter.com
+        href: https://github.com/Sass09
+      
 format:
   html:
-    theme: cosmo
+    theme: lux
     css: styles.css
-
+    fontcolor: blue
 editor: visual
 
