@@ -5,17 +5,13 @@ author: "Shifa Maqsood"
 
 Q. Write a blog post where you demonstrate your ability to use these basic programming concepts in R.
 
-**1.**  R objects: show that you understand and can create/use objects of various types, including at least: character/string, numeric, integer, logical, data.frame, and list. Show that you can index objects appropriately (e.g., locate elements of an object, change elements of an object etc.)
+**1.** R objects: show that you understand and can create/use objects of various types, including at least: character/string, numeric, integer, logical, data.frame, and list. Show that you can index objects appropriately (e.g., locate elements of an object, change elements of an object etc.)
 
-**2.**  Logical operations: show that you understand and can use logical operators in R (e.g., == \| \> \< \>= \<=)
+**2.** Logical operations: show that you understand and can use logical operators in R (e.g., == \| \> \< \>= \<=)
 
+**3.** Loops: Show that you understand the components of a for loop, and that you can use a for loop.
 
-**3.**  Loops: Show that you understand the components of a for loop, and that you can use a for loop.
-
-There are three types of loops, for loop, while loop and repeat loops. 
-For loop is the commonly used loop.
-The syntax is 
-
+There are three types of loops, for loop, while loop and repeat loops. For loop is the commonly used loop. The syntax is
 
 ```{r}
 

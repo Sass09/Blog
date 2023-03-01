@@ -52,8 +52,7 @@ class(TRUE) #it tells that the class of true is logical
 
 ```
 
-**Factor data**
-When you use factor, you are telling R that this is categorical data with levels. This can be very helpful in various types of statistical analysis.
+**Factor data** When you use factor, you are telling R that this is categorical data with levels. This can be very helpful in various types of statistical analysis.
 
 ```{r}
 
@@ -66,7 +65,7 @@ myfactor
 
 #Tidy data
 
-Untidy data can be hard for us and the computer to read and do anlaysis on it. In tidy data, every column is variable, every row is an observation and every cell is  a single value. 
+Untidy data can be hard for us and the computer to read and do anlaysis on it. In tidy data, every column is variable, every row is an observation and every cell is a single value.
 
 ```{r}
 
@@ -88,8 +87,8 @@ tidy_data <- read.csv("CopyOfdata/tidy_data.csv")
 tidy_data #This is an example of tidy data. It shows how each observatio ihas its own row and each value has its own cell.
 
 ```
-#GGplot
 
+#GGplot
 
 ```{r}
 library(ggplot2)
@@ -115,13 +114,4 @@ survey_ggplot
 
 
 ```
-
-
-
-
-
-
-```
-
-
 
