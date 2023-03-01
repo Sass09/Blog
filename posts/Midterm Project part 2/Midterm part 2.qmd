@@ -138,3 +138,13 @@ mean(save_rolls)
 
 
 ```
+
+try doing it for one ladder
+
+```{r}
+
+
+
+
+
+```
