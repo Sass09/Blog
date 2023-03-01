@@ -90,9 +90,6 @@ tidy_data #This is an example of tidy data. It shows how each observatio ihas it
 ```
 #GGplot
 
-GGplot is part of the package tidyverse and frequently used for plots. 
-
-
 
 ```{r}
 library(ggplot2)
@@ -118,3 +115,13 @@ survey_ggplot
 
 
 ```
+
+
+
+
+
+
+```
+
+
+

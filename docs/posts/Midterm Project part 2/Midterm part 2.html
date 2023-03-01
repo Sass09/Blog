@@ -184,7 +184,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 
 
-<p>##Easy problem</p>
+<p>#Easier problems</p>
 <p>Problem 1: List all of the odd numbers from 1 to 100. you could use the seq() function How could you do this without using the seq() function? Consider using the mod function %%, which evaluates whether or not there is a remainder when dividing one number by another.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">100</span>){</span>
@@ -248,26 +248,100 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">runif</span>(<span class="dv">100</span>,<span class="dv">1</span>,<span class="dv">100</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>  [1] 21.258418 50.964043 70.903722 87.173210 16.695212 73.073811 51.046567
-  [8] 39.451603 51.658284 74.905202 66.248468 10.678605 95.053985  3.421871
- [15] 42.618388 82.072405 63.689877 70.684758 81.133528 78.954426  8.815671
- [22] 36.181748 88.308323 60.945155 35.485430 28.339058 87.497961 64.148747
- [29] 63.349227 54.643512 10.896349 98.572054 94.208854 79.280627 30.030701
- [36] 43.366495 11.911864 88.027844 44.558063 49.139229 54.142750 28.805858
- [43] 93.652578 68.698916 75.197829 79.751025  3.656771 31.540686 12.439891
- [50]  2.622655 77.230015 23.678032 16.078053 63.347620 23.303808 10.127948
- [57] 94.313371 33.453750 22.613649 70.028861 45.571322 86.708065 76.358984
- [64] 12.787500 12.843111 36.756489 76.875462 37.734986 16.314075 15.441524
- [71] 67.254281 47.619489 75.919205 40.616242 39.571526 46.006636 33.143976
- [78] 47.963601 92.627850 21.849036 58.868373 23.488515 84.707954 71.111479
- [85] 47.539405 98.833812 77.920700 41.153195 98.755082  5.994807 27.833196
- [92] 11.364102 27.547417 20.291137 35.913706 51.235124  6.868133  9.588367
- [99]  4.304036 33.328631</code></pre>
+<pre><code>  [1] 93.196150 40.103824 99.608201  3.650588 34.409851 32.158707 67.194957
+  [8] 94.847158 49.084110 35.436538 54.216478 48.309134 43.322944 81.361770
+ [15]  4.040518 28.261435 64.324480 99.281394 50.331711 22.528186 38.526801
+ [22] 90.572363 84.246129  4.205521 47.071087 47.584610 69.083983 78.323553
+ [29]  8.675619 40.665314 16.738878 95.157582 11.525182 43.274326 69.554281
+ [36] 29.480298 10.784423 94.162945 88.095303 98.467355 14.772120 66.427740
+ [43] 33.537392 84.228487 79.941065 46.057244 72.950602 36.726476 30.181683
+ [50] 44.122606 83.771231 74.074494 94.910284 26.216149  9.773446 32.235727
+ [57] 43.273278 21.064928 40.071358 94.957919 35.638419 37.114205 28.155713
+ [64] 36.641489 33.657482 11.397725 50.739089 42.922491 24.157475 52.832647
+ [71] 10.238034 96.500270 86.058171  2.529555 32.467617  8.108295 39.156615
+ [78] 34.082822 51.754592 34.394322 84.024949 43.073672 87.345685 33.138352
+ [85] 39.993771 85.525102 96.959151 25.628987 19.565732 81.457261 52.753240
+ [92] 86.456000 51.704717  3.522147 49.151568 17.830414 18.215342 11.437206
+ [99] 85.202503 99.524868</code></pre>
 </div>
 </div>
-<p>Problem 3: reate a variable that stores a 20x20 matrix of random numbers</p>
+<p>Problem 3: Create a variable that stores a 20x20 matrix of random numbers</p>
 <div class="cell">
-
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>random_num <span class="ot">&lt;-</span><span class="fu">matrix</span>(<span class="fu">runif</span>(<span class="dv">400</span>, <span class="at">min=</span><span class="dv">3</span>,<span class="at">max=</span><span class="dv">45</span>), <span class="at">nrow =</span> <span class="dv">20</span>, <span class="at">ncol=</span><span class="dv">20</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>#Harder problems</p>
+<p>Problem 1: FizzBuzz List the numbers from 1 to 100 with the following constraints.</p>
+<p>This question can be solved using for loop and if else statements</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>fizzb <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">100</span>)</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">length</span>(fizzb)){</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  fizzb[i] <span class="ot">&lt;-</span>i</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span>(i<span class="sc">%%</span><span class="dv">3</span> <span class="sc">==</span> <span class="dv">0</span> <span class="sc">&amp;</span> i<span class="sc">%%</span><span class="dv">5</span><span class="sc">==</span> <span class="dv">0</span>){</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    fizzb[i] <span class="ot">=</span><span class="st">"FizzBuzz"</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> <span class="cf">if</span> (i<span class="sc">%%</span><span class="dv">3</span> <span class="sc">==</span><span class="dv">0</span>){</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>    fizzb[i] <span class="ot">=</span><span class="st">"Fizz"</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span> <span class="cf">if</span> (i<span class="sc">%%</span><span class="dv">5</span> <span class="sc">==</span><span class="dv">0</span> )</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>  fizzb[i] <span class="ot">=</span> <span class="st">"Buzz"</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Problem 2:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>a<span class="ot">&lt;-</span><span class="fu">runif</span>(<span class="dv">10000000</span>,<span class="dv">0</span>,<span class="dv">100</span>)</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(a)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="Midterm-part-2_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>Problem 3: Assume that a pair of dice are rolled. Using monte carlo-simulation, compute the probabilities of rolling a 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, and 12, respectively.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>dice1 <span class="ot">&lt;-</span> <span class="fu">replicate</span>(<span class="dv">1000</span>,(<span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>,<span class="dv">1</span>,<span class="at">replace=</span> <span class="cn">TRUE</span>)))</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>dice2 <span class="ot">&lt;-</span><span class="fu">replicate</span>(<span class="dv">1000</span>,(<span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>,<span class="dv">1</span>,<span class="at">replace=</span> <span class="cn">TRUE</span>)))</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>sim <span class="ot">&lt;-</span> <span class="fu">c</span>()</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>combined <span class="ot">&lt;-</span> dice1<span class="sc">+</span>dice2</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>sim <span class="ot">&lt;-</span> <span class="fu">table</span>(combined)<span class="sc">/</span><span class="dv">1000</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Problem 4: Multiplication table</p>
+<p>Generate a matrix for a multiplication table. For example, the labels for the columns could be the numbers 1 to 10, and the labels for the rows could be the numbers 1 to 10. The contents of each of the cells in the matrix should be correct answer for multiplying the column value by the row value.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>multiplication_table <span class="ot">&lt;-</span><span class="fu">matrix</span>(<span class="cn">NA</span>, <span class="at">nrow=</span><span class="dv">10</span>, <span class="at">ncol=</span><span class="dv">10</span>)</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(multiplication_table) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"1"</span>, <span class="st">"2"</span>, <span class="st">"3"</span> ,<span class="st">"4"</span>, <span class="st">"5"</span>, <span class="st">"6"</span>, <span class="st">"7"</span>,<span class="st">"8"</span>,<span class="st">"9"</span>,<span class="st">"10"</span>)</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="fu">rownames</span>(multiplication_table) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"1"</span>, <span class="st">"2"</span>, <span class="st">"3"</span> ,<span class="st">"4"</span>, <span class="st">"5"</span>, <span class="st">"6"</span>, <span class="st">"7"</span>,<span class="st">"8"</span>,<span class="st">"9"</span>,<span class="st">"10"</span>)</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>) {</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span>(j <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>) {</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>   multiplication_table[i, j] <span class="ot">=</span> (i<span class="sc">*</span>j)</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Problem 5:</p>
+<p>snakes and ladders. how do you add in a representaion of the board, so that you change which square the player is on depending on whether they land on a ladder or snake.</p>
+<p>try solving the problem in a simpler way . like maybe roll. dice for ladder</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>save_rolls <span class="ot">&lt;-</span> <span class="fu">c</span>()</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(sims <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">1000</span>){</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    total_sum<span class="ot">&lt;-</span><span class="dv">0</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>    number_of_rolls<span class="ot">&lt;-</span><span class="dv">0</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>    curpos <span class="ot">&lt;-</span><span class="dv">0</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>    ladder <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">3</span><span class="sc">:</span><span class="dv">11</span>, <span class="dv">6</span><span class="sc">:</span><span class="dv">17</span>,<span class="dv">9</span><span class="sc">:</span><span class="dv">18</span>,<span class="dv">10</span><span class="sc">:</span><span class="dv">12</span>)</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>    snakes <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">14</span><span class="sc">:</span><span class="dv">4</span>, <span class="dv">19</span><span class="sc">:</span><span class="dv">8</span>, <span class="dv">22</span><span class="sc">:</span><span class="dv">20</span>, <span class="dv">24</span><span class="sc">:</span><span class="dv">16</span>)</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>  <span class="cf">while</span>(total_sum <span class="sc">&lt;</span> <span class="dv">25</span>){</span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>    total_sum <span class="ot">&lt;-</span>total_sum<span class="sc">+</span><span class="fu">sample</span>(<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>),<span class="dv">1</span>)</span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> (curpos <span class="sc">%in%</span> snakes) {</span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>       curpos <span class="ot">=</span> curpos <span class="sc">+</span><span class="dv">1</span>  }</span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> (curpos <span class="sc">%in%</span> ladder){</span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>       curpos <span class="ot">=</span> curpos <span class="sc">+</span><span class="dv">1</span></span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>  number_of_rolls <span class="ot">&lt;-</span> number_of_rolls<span class="sc">+</span><span class="dv">1</span></span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a>save_rolls[sims] <span class="ot">&lt;-</span> number_of_rolls</span>
+<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(save_rolls)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 7.61</code></pre>
+</div>
 </div>
 
 

@@ -58,6 +58,7 @@ else if (i%%5 ==0 )
 Problem 2:
 
 ```{r}
+
 a<-runif(10000000,0,100)
 hist(a)
 
