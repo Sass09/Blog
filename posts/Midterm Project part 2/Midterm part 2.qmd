@@ -124,9 +124,9 @@ for(sims in 1:1000){
   while(total_sum < 25){
     total_sum <-total_sum+sample(c(1,2,3,4,5,6),1)
       if (curpos %in% snakes) {
-       curpos = curpos +1  }
+       curpos <- curpos +1  }
       if (curpos %in% ladder){
-       curpos = curpos +1
+       curpos <- curpos +1
   }
   number_of_rolls <- number_of_rolls+1
 
@@ -138,5 +138,3 @@ mean(save_rolls)
 
 
 ```
-
-Problem mm
