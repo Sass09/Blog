@@ -7,7 +7,42 @@ Q. Write a blog post where you demonstrate your ability to use these basic progr
 
 **1.** R objects: show that you understand and can create/use objects of various types, including at least: character/string, numeric, integer, logical, data.frame, and list. Show that you can index objects appropriately (e.g., locate elements of an object, change elements of an object etc.)
 
+```{r}
+
+all_kind_of_data <- data.frame(  #this is a  dataframe
+  characterss= c("hello", "home", "sun"),
+  random.number = c(4L,6L,8L)
+)
+
+class(all_kind_of_data$characterss) 
+all_kind_of_data[,1] #indexes the character column 
+
+a <- c(4,6)
+b <-c(7,6)
+c <- a==b #it compares each element and shows if it is TRUE or FALSE 
+c
+
+all_kind_of_data$characterss <- c("sun") #changed the elements inside the dataframe
+```
+
 **2.** Logical operations: show that you understand and can use logical operators in R (e.g., == \| \> \< \>= \<=)
+
+```{r}
+
+16==16 #returns TRUE as 16 is equal to 16
+5>2
+5|3
+a <-c(5,7,8,4)
+
+a[a>=6] #it means you are finding all values in object a which have values more than 6 
+
+
+
+
+
+
+
+```
 
 **3.** Loops: Show that you understand the components of a for loop, and that you can use a for loop.
 
@@ -25,3 +60,15 @@ for (i in j ){
 ```
 
 **4.** Functions: Show that you understand the syntax for declaring your own function, and that you can declare and run your own custom function to accomplish some task (you choose what the function does).
+
+```{r}
+
+my_fun <- function(x){
+  random <- x^2
+  return(random)
+}
+
+my_fun(5)
+
+
+```
