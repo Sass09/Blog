@@ -141,6 +141,8 @@ mean(save_rolls)
 
 try doing it for one ladder
 
+so i could do something like if number of roll is ==3 then do this cuz curpos is not interacting with my dice roll
+
 ```{r}
 
 

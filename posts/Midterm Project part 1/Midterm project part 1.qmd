@@ -1,6 +1,7 @@
 ---
 title: "Midterm project part 1"
 author: "Shifa Maqsood"
+image: "function.png"
 ---
 
 Q. Write a blog post where you demonstrate your ability to use these basic programming concepts in R.
