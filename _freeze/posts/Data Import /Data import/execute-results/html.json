@@ -1,0 +1,14 @@
+{
+  "hash": "46e895956f052eb0f74557a630a8f101",
+  "result": {
+    "markdown": "---\ntitle: \"Data Import\"\nauthor: Shifa Maqsood\n---\n\n\n\n\n#Built-in data\n\n::: {.cell}\n\n```{.r .cell-code}\n#data(cars)\n\n  #this shows your data\n\n#view(cars) \n\n  #one of the way you can view your data\n```\n:::\n\n\n#Importing data\n\n\n::: {.cell}\n\n```{.r .cell-code}\n# rio::import() is helpful\navatar <- readr::read_csv(\"data/avatar.csv\")\n```\n\n::: {.cell-output .cell-output-stderr}\n```\nRows: 3 Columns: 3\n── Column specification ────────────────────────────────────────────────────────\nDelimiter: \",\"\nchr (2): name, bends\nlgl (1): friendly\n\nℹ Use `spec()` to retrieve the full column specification for this data.\nℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.\n```\n:::\n\n```{.r .cell-code}\n#spec() function enables us to change our data type simultaneously, first load package readr::read_whatever file type\n```\n:::\n\n\n#Creating data\n\n::: {.cell}\n\n```{.r .cell-code}\n random_data <- data.frame(\n   random_number = c(1,5),\n   random_words = c(\"water\", \"earth\")\n \n     )\nrandom_data %>%\n  mutate( c(\"tf\",\"hh\"))\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n  random_number random_words c(\"tf\", \"hh\")\n1             1        water            tf\n2             5        earth            hh\n```\n:::\n:::\n\n#Writing data\n\n\n::: {.cell}\n\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

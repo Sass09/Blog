@@ -80,8 +80,59 @@ sim <- table(combined)/1000
 
 Problem 4: Multiplication table
 
+Generate a matrix for a multiplication table. For example, the labels for the columns could be the numbers 1 to 10, and the labels for the rows could be the numbers 1 to 10. The contents of each of the cells in the matrix should be correct answer for multiplying the column value by the row value.
+
 ```{r}
 
+multiplication_table <-matrix(NA, nrow=10, ncol=10)
+colnames(multiplication_table) <- c("1", "2", "3" ,"4", "5", "6", "7","8","9","10")
+
+rownames(multiplication_table) <- c("1", "2", "3" ,"4", "5", "6", "7","8","9","10")
+
+for(i in 1:10) {
+  for(j in 1:10) {
+   multiplication_table[i, j] = (i*j)
+  }
+}
+
+
+
+  
+ 
+
+  
+
+```
+
+Problem 5:
+
+snakes and ladders. how do you add in a representaion of the board, so that you change which square the player is on depending on whether they land on a ladder or snake.
+
+try solving the problem in a simpler way . like maybe roll. dice for ladder
+
+```{r}
+
+
+save_rolls <- c()
+for(sims in 1:1000){
+    total_sum<-0
+    number_of_rolls<-0
+    curpos <-0
+    ladder <- c(3:11, 6:17,9:18,10:12)
+    snakes <- c(14:4, 19:8, 22:20, 24:16)
+  while(total_sum < 25){
+    total_sum <-total_sum+sample(c(1,2,3,4,5,6),1)
+      if (curpos %in% snakes) {
+       curpos = curpos +1  }
+      if (curpos %in% ladder){
+       curpos = curpos +1
+  }
+  number_of_rolls <- number_of_rolls+1
+
+}
+save_rolls[sims] <- number_of_rolls
+}
+mean(save_rolls)
 
 
 

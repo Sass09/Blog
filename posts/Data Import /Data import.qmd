@@ -1,0 +1,57 @@
+---
+title: "Data Import"
+author: Shifa Maqsood
+---
+
+```{r setup, include=FALSE}
+
+library(tidyverse)     # includes readr & tibble
+library(rio)           # for almost any data import/export
+library(haven)         # for SPSS, Stata,and SAS files
+library(readxl)        # for Excel files
+library(googlesheets4)
+       
+```
+
+#Built-in data
+```{r}
+#data(cars)
+
+  #this shows your data
+
+#view(cars) 
+
+  #one of the way you can view your data
+```
+
+#Importing data
+
+```{r}
+# rio::import() is helpful
+avatar <- readr::read_csv("data/avatar.csv")
+
+#spec() function enables us to change our data type simultaneously, first load package readr::read_whatever file type
+```
+
+#Creating data
+```{r}
+ random_data <- data.frame(
+   random_number = c(1,5),
+   random_words = c("water", "earth")
+ 
+     )
+random_data %>%
+  mutate( c("tf","hh"))
+  
+
+```
+#Writing data
+
+```{r}
+
+
+
+
+
+```
+
