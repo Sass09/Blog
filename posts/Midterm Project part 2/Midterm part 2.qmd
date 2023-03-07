@@ -17,15 +17,8 @@ for (i in 1:100){
 
 ```
 
-Problem 2 : Generate 100 random numbers within a specific range runif can do this
 
-```{r}
-
-runif(100,1,100)
-
-```
-
-Problem 3: Create a variable that stores a 20x20 matrix of random numbers
+Problem 2: Create a variable that stores a 20x20 matrix of random numbers
 
 ```{r}
 random_num <-matrix(runif(400, min=3,max=45), nrow = 20, ncol=20)
