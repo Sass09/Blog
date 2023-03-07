@@ -1,0 +1,100 @@
+---
+title: "Data Summaries"
+author: Shifa Maqsood
+---
+```{r setup, include=FALSE}
+library(tidyverse)   # data wrangling functions
+library(rtweet)      # for searching tweets
+library(kableExtra)  # for nice tables
+
+```
+
+```{r}
+tweets <- readRDS("ncod_tweets.rds")
+favourite_summary <- summarise(tweets,
+                           mean_favs = mean(favorite_count),
+                           median_favs = median(favorite_count),
+                           min_favs = min(favorite_count),
+                           max_favs = max(favorite_count))
+
+```
+
+```{r}
+ggplot(tweets, aes(x = favorite_count)) +
+  geom_histogram(bins = 25) +
+  scale_x_continuous(trans = "pseudo_log", #it goes up in intervals of magnitude and it helps see how much is between each interval 
+                     breaks = c(0, 1, 10, 100, 1000, 10000))
+
+
+
+```
+
+```{r}
+tweets$source[2] #displays the second value in the row
+# %>% this is a pipe operator and it can be used to send output from one function into another 
+tweet_summary <- tweets %>% # start with the object tweets and then
+  summarise(mean_favs = mean(favorite_count), #summarise it
+            median_favs = median(favorite_count))
+
+```
+
+```{r}
+tweet_summary <- tweets %>%
+  summarise(mean_favs = mean(favorite_count),
+            median_favs = quantile(favorite_count, .5),
+            n = n(),
+            min_date = min(created_at),
+            max_date = max(created_at))
+
+glimpse(tweet_summary)
+
+
+#inline coding is also very helpful when it comes to writing paper.
+#You use `r' 
+date_from <- tweet_summary$min_date %>% 
+  format("%d %B, %Y")
+date_to <- tweet_summary$max_date %>% 
+  format("%d %B, %Y")
+  
+```
+
+There were `r tweet_summary$n` tweets between `r date_from` and `r date_to`.
+ 
+```{r}
+verified <- 
+  tweets %>% # Start with the original dataset; and then
+  group_by(verified) %>% # group it; and then
+  summarise(count = n(), # summarise it by those groups
+            mean_favs = mean(favorite_count),
+            mean_retweets = mean(retweet_count)) %>%
+  ungroup()
+
+verified
+
+
+
+```
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

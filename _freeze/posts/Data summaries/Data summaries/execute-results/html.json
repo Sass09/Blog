@@ -1,0 +1,16 @@
+{
+  "hash": "d02608065b67b3caa31bd5b59e0bf765",
+  "result": {
+    "markdown": "---\ntitle: \"Data Summaries\"\nauthor: Shifa Maqsood\n---\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\ntweets <- readRDS(\"ncod_tweets.rds\")\nfavourite_summary <- summarise(tweets,\n                           mean_favs = mean(favorite_count),\n                           median_favs = median(favorite_count),\n                           min_favs = min(favorite_count),\n                           max_favs = max(favorite_count))\n```\n:::\n\n::: {.cell}\n\n```{.r .cell-code}\nggplot(tweets, aes(x = favorite_count)) +\n  geom_histogram(bins = 25) +\n  scale_x_continuous(trans = \"pseudo_log\", #it goes up in intervals of magnitude and it helps see how much is between each interval \n                     breaks = c(0, 1, 10, 100, 1000, 10000))\n```\n\n::: {.cell-output-display}\n![](Data-summaries_files/figure-html/unnamed-chunk-2-1.png){width=672}\n:::\n:::\n\n::: {.cell}\n\n```{.r .cell-code}\ntweets$source[2] #displays the second value in the row\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n[1] \"Twitter for iPhone\"\n```\n:::\n\n```{.r .cell-code}\n# %>% this is a pipe operator and it can be used to send output from one function into another \ntweet_summary <- tweets %>% # start with the object tweets and then\n  summarise(mean_favs = mean(favorite_count), #summarise it\n            median_favs = median(favorite_count))\n```\n:::\n\n::: {.cell}\n\n```{.r .cell-code}\ntweet_summary <- tweets %>%\n  summarise(mean_favs = mean(favorite_count),\n            median_favs = quantile(favorite_count, .5),\n            n = n(),\n            min_date = min(created_at),\n            max_date = max(created_at))\n\nglimpse(tweet_summary)\n```\n\n::: {.cell-output .cell-output-stdout}\n```\nRows: 1\nColumns: 5\n$ mean_favs   <dbl> 29.71732\n$ median_favs <dbl> 3\n$ n           <int> 28626\n$ min_date    <dttm> 2021-10-10 00:10:02\n$ max_date    <dttm> 2021-10-12 20:12:27\n```\n:::\n\n```{.r .cell-code}\n#inline coding is also very helpful when it comes to writing paper.\n#You use `r' \ndate_from <- tweet_summary$min_date %>% \n  format(\"%d %B, %Y\")\ndate_to <- tweet_summary$max_date %>% \n  format(\"%d %B, %Y\")\n```\n:::\n\n\nThere were 28626 tweets between 10 October, 2021 and 12 October, 2021.\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n",
+    "supporting": [
+      "Data-summaries_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
