@@ -17,8 +17,15 @@ for (i in 1:100){
 
 ```
 
+Problem 2 : Generate 100 random numbers within a specific range runif can do this
 
-Problem 2: Create a variable that stores a 20x20 matrix of random numbers
+```{r}
+
+runif(100,1,100)
+
+```
+
+Problem 3: Create a variable that stores a 20x20 matrix of random numbers
 
 ```{r}
 random_num <-matrix(runif(400, min=3,max=45), nrow = 20, ncol=20)
@@ -48,19 +55,8 @@ else if (i%%5 ==0 )
 
 ```
 
-Problem 2:
 
-```{r}
-
-a<-runif(10000000,0,100)
-hist(a)
-
-
-
-
-```
-
-Problem 3: Assume that a pair of dice are rolled. Using monte carlo-simulation, compute the probabilities of rolling a 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, and 12, respectively.
+Problem 2: Assume that a pair of dice are rolled. Using monte carlo-simulation, compute the probabilities of rolling a 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, and 12, respectively.
 
 ```{r}
 
@@ -72,7 +68,7 @@ sim <- table(combined)/1000
 
 ```
 
-Problem 4: Multiplication table
+Problem 3: Multiplication table
 
 Generate a matrix for a multiplication table. For example, the labels for the columns could be the numbers 1 to 10, and the labels for the rows could be the numbers 1 to 10. The contents of each of the cells in the matrix should be correct answer for multiplying the column value by the row value.
 
@@ -98,7 +94,7 @@ for(i in 1:10) {
 
 ```
 
-Problem 5:
+Problem 4:
 
 snakes and ladders. how do you add in a representaion of the board, so that you change which square the player is on depending on whether they land on a ladder or snake.
 
