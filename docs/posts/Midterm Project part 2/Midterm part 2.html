@@ -248,21 +248,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">runif</span>(<span class="dv">100</span>,<span class="dv">1</span>,<span class="dv">100</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>  [1] 37.813614 79.883088 96.774900 49.682886 14.289299 87.144079 34.784642
-  [8] 82.189359 25.604310 28.675001 32.063840 84.931776 59.616204 44.677730
- [15] 40.421450 28.964236 63.221484 20.876242 21.722248  2.632480 43.539708
- [22] 28.131119  1.085114 56.365740 65.820722 89.585780 92.222589 75.889201
- [29] 70.835594 16.323856 45.306581 86.032282 95.986741 45.846097 12.572435
- [36] 52.464213 35.827441 56.222886 73.631163 81.830286 79.929604 42.658219
- [43] 14.770165 49.435399 91.164870  4.866781 86.551720 16.314690 58.028046
- [50] 12.184192 49.561618 68.519881 25.798122 30.233866 89.902486 41.908653
- [57] 80.940550 62.582792  3.688608 39.265060 38.249041 25.689324 56.063081
- [64] 69.600161 61.955831 83.412628  5.664837  4.354143 72.517111  7.886056
- [71] 88.560029 75.858761 54.584646 34.395876 48.676902 51.879358  6.054567
- [78] 44.751182 25.700419 84.190600 32.032720 61.128325 84.095162 21.694594
- [85] 37.614443 74.832230 98.213466 65.123505 12.564706 87.169409  4.750542
- [92] 81.527947 99.171892 80.862362  9.930899 15.594829 25.451958 22.687569
- [99] 93.486492 45.395789</code></pre>
+<pre><code>  [1] 64.436461 67.425996 37.733902 25.856696 17.667798 27.248509 33.781161
+  [8] 39.416043 73.402753 83.454094 18.722650 71.222834 79.320418 23.590661
+ [15] 50.457405 10.546260 99.383711  2.040373 69.579436 11.982844 31.805200
+ [22] 16.199321 71.087320 23.541194 33.461554 77.034933 37.734349  6.414609
+ [29] 56.506032 70.241069 92.316900 82.635751 63.143661 87.767597 34.839778
+ [36] 26.575372 53.856961 23.896905  2.375869  5.463429 80.227275 20.248844
+ [43] 34.181192 82.991221 47.015637  3.584679 18.295547 79.309527 23.190767
+ [50] 69.583087 40.995297 72.655054 29.120021 29.849129 46.558720 10.494169
+ [57] 72.555098  1.284366 29.831388 33.035167 69.502316 92.487189 32.488956
+ [64] 17.362531 15.819941  6.418205 38.140962  3.834842 90.958050 31.441183
+ [71] 45.970284 24.347698 81.437447 45.072091 35.915473 10.762908 11.546970
+ [78] 98.939248 23.466218 47.661477  5.726721 88.951057 88.208977 23.607445
+ [85] 29.625455 31.556256 74.733384  9.773470 95.004525 98.513786  5.654404
+ [92] 97.363531 66.241705 74.641934 85.325595 31.501481 19.444449 42.712021
+ [99] 76.486768  9.204785</code></pre>
 </div>
 </div>
 <p>Problem 3: Create a variable that stores a 20x20 matrix of random numbers</p>
@@ -317,36 +317,45 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <p>Problem 5:</p>
 <p>snakes and ladders. how do you add in a representaion of the board, so that you change which square the player is on depending on whether they land on a ladder or snake.</p>
-<p>try solving the problem in a simpler way . like maybe roll. dice for ladder</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>save_rolls <span class="ot">&lt;-</span> <span class="fu">c</span>()</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(sims <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">1000</span>){</span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    total_sum<span class="ot">&lt;-</span><span class="dv">0</span></span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>    number_of_rolls<span class="ot">&lt;-</span><span class="dv">0</span></span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>    curpos <span class="ot">&lt;-</span><span class="dv">0</span></span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>    ladder <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">3</span><span class="sc">:</span><span class="dv">11</span>, <span class="dv">6</span><span class="sc">:</span><span class="dv">17</span>,<span class="dv">9</span><span class="sc">:</span><span class="dv">18</span>,<span class="dv">10</span><span class="sc">:</span><span class="dv">12</span>)</span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>    snakes <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">14</span><span class="sc">:</span><span class="dv">4</span>, <span class="dv">19</span><span class="sc">:</span><span class="dv">8</span>, <span class="dv">22</span><span class="sc">:</span><span class="dv">20</span>, <span class="dv">24</span><span class="sc">:</span><span class="dv">16</span>)</span>
-<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>  <span class="cf">while</span>(total_sum <span class="sc">&lt;</span> <span class="dv">25</span>){</span>
-<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>    total_sum <span class="ot">&lt;-</span>total_sum<span class="sc">+</span><span class="fu">sample</span>(<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>),<span class="dv">1</span>)</span>
-<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> (curpos <span class="sc">%in%</span> snakes) {</span>
-<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>       curpos <span class="ot">&lt;-</span> curpos <span class="sc">+</span><span class="dv">1</span>  }</span>
-<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> (curpos <span class="sc">%in%</span> ladder){</span>
-<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>       curpos <span class="ot">&lt;-</span> curpos <span class="sc">+</span><span class="dv">1</span></span>
-<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>  number_of_rolls <span class="ot">&lt;-</span> number_of_rolls<span class="sc">+</span><span class="dv">1</span></span>
-<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a>save_rolls[sims] <span class="ot">&lt;-</span> number_of_rolls</span>
-<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(save_rolls)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 7.637</code></pre>
-</div>
-</div>
 <p>try doing it for one ladder</p>
 <p>so i could do something like if number of roll is ==3 then do this cuz curpos is not interacting with my dice roll</p>
 <div class="cell">
-
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>save_rolls <span class="ot">&lt;-</span> <span class="fu">c</span>()</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(sims <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">100</span>){</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>curpos<span class="ot">&lt;-</span><span class="dv">0</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>number_of_rolls<span class="ot">&lt;-</span><span class="dv">0</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span>(curpos <span class="sc">&lt;</span> <span class="dv">25</span>){</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>    curpos <span class="ot">&lt;-</span> curpos<span class="sc">+</span><span class="fu">sample</span>(<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>),<span class="dv">1</span>)</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>   <span class="cf">if</span> (curpos <span class="sc">==</span> <span class="dv">3</span>){</span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>     curpos <span class="ot">&lt;-</span><span class="dv">11</span></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>   }</span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (curpos <span class="sc">==</span> <span class="dv">6</span>){</span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>      curpos <span class="ot">&lt;-</span> <span class="dv">17</span></span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (curpos <span class="sc">==</span> <span class="dv">10</span>){</span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>      curpos <span class="ot">&lt;-</span> <span class="dv">12</span></span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (curpos <span class="sc">==</span> <span class="dv">14</span>){</span>
+<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a>      curpos <span class="ot">&lt;-</span> <span class="dv">4</span></span>
+<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (curpos <span class="sc">==</span><span class="dv">19</span>){</span>
+<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a>      curpos <span class="ot">&lt;-</span><span class="dv">8</span></span>
+<span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span>(curpos <span class="sc">==</span> <span class="dv">22</span>){</span>
+<span id="cb10-24"><a href="#cb10-24" aria-hidden="true" tabindex="-1"></a>      curpos <span class="ot">&lt;-</span> <span class="dv">20</span></span>
+<span id="cb10-25"><a href="#cb10-25" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb10-26"><a href="#cb10-26" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (curpos <span class="sc">==</span><span class="dv">24</span>){</span>
+<span id="cb10-27"><a href="#cb10-27" aria-hidden="true" tabindex="-1"></a>      curpos <span class="ot">&lt;-</span> <span class="dv">16</span></span>
+<span id="cb10-28"><a href="#cb10-28" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb10-29"><a href="#cb10-29" aria-hidden="true" tabindex="-1"></a>  number_of_rolls <span class="ot">&lt;-</span> number_of_rolls<span class="sc">+</span><span class="dv">1</span></span>
+<span id="cb10-30"><a href="#cb10-30" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb10-31"><a href="#cb10-31" aria-hidden="true" tabindex="-1"></a>save_rolls[sims] <span class="ot">&lt;-</span> number_of_rolls</span>
+<span id="cb10-32"><a href="#cb10-32" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb10-33"><a href="#cb10-33" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(save_rolls)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 9.98</code></pre>
+</div>
 </div>
 
 
