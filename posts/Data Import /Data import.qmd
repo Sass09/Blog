@@ -53,7 +53,57 @@ random_data %>%
 ```{r}
 
 
+#try making data frame, export it, then remove it from environment
+family <- data.frame(
+  first_name= c("lisa", "James"),
+  last_name = c("Robert", "Jones"),
+  Ages = c(34,40)
+)
+export(family, "data/family.csv")
 
 
 
 ```
+
+
+```{r}
+#import data after deleting it  from environment
+try_importing <- import("data/family.csv")
+
+```
+# Convert column types of a data set
+
+```{r}
+
+
+starwars <-read_csv("data/starwars.csv")
+#use this function: spec(starwars) 
+ 
+ct <- cols(
+  name = col_character(),
+  height = col_factor(),
+  mass = col_double(),
+  hair_color = col_factor(),
+  skin_color = col_factor(),
+  eye_color = col_factor(),
+  birth_year = col_double(),
+  sex = col_factor(),
+  gender = col_factor(),
+  homeworld = col_factor(),
+  species = col_factor(),
+  films = col_skip(),
+  vehicles = col_skip(),
+  starships = col_skip()
+)
+
+starwars <- read_csv("data/starwars.csv",
+                   col_types = ct)
+
+
+
+starwars <-read_csv("data/starwars.csv", col_types = ct)
+
+
+
+```
+
