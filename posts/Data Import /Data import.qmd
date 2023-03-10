@@ -13,7 +13,7 @@ library(googlesheets4)
        
 ```
 
-#Built-in data
+# Built-in data
 
 ```{r}
 #data(cars)
@@ -25,7 +25,7 @@ library(googlesheets4)
   #one of the way you can view your data
 ```
 
-#Importing data
+# Importing data
 
 ```{r}
 # rio::import() is helpful
@@ -34,7 +34,7 @@ avatar <- readr::read_csv("data/avatar.csv")
 #spec() function enables us to change our data type simultaneously, first load package readr::read_whatever file type
 ```
 
-#Creating data
+# Creating data
 
 ```{r}
  random_data <- data.frame(
@@ -48,7 +48,7 @@ random_data %>%
 
 ```
 
-#Writing data
+# Writing data
 
 ```{r}
 
