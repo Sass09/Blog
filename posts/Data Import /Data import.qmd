@@ -76,7 +76,7 @@ try_importing <- import("data/family.csv")
 ```{r}
 
 
-starwars <-read_csv("data/starwars.csv")
+starwars <-read_csv("data/starwars.csv", show_col_types=FALSE)
 #use this function: spec(starwars) 
  
 ct <- cols(
