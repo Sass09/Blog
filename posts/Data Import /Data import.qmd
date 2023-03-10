@@ -107,3 +107,15 @@ starwars <-read_csv("data/starwars.csv", col_types = ct)
 
 ```
 
+
+```{r}
+df <- data.frame(team=rep(c('A', 'B', 'C'), each=4),
+                 points=c(3, 5, 5, 6, 5, 7, 7, 8, 9, 9, 9, 8))
+
+ggplot(df, aes(team, points)) +
+  geom_bar(stat="identity", position = "dodge")
+
+
+
+
+```
