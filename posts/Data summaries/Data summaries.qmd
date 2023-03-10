@@ -9,7 +9,7 @@ library(kableExtra)  # for nice tables
 
 ```
 
-#Social media data and summarise ()
+# Social media data and summarise ()
 ```{r}
 tweets <- readRDS("ncod_tweets.rds")
 favourite_summary <- summarise(tweets,
@@ -109,7 +109,7 @@ most_fav <- tweets %>%
 
 ```
  
-#Inline coding 2
+# Inline coding 2
 ```{r}
 
 tweets_per_user <- tweets %>%
@@ -128,7 +128,7 @@ most_prolific_n <- slice(tweets_per_user, 1) %>%
  There were `r unique_users` unique accounts tweeting about #NationalComingOutDay. `r most_prolific` was the most prolific tweeter, with `r most_prolific_n` tweets.
  
  
-#Extra challenge problem
+# Extra challenge problem
 
 ```{r}
 ny_data <- readr::read_csv("New_York_City_Leading_Causes_of_Death.csv")
