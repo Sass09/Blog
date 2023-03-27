@@ -1,0 +1,22 @@
+`
+```{r setup, include=FALSE}
+
+library(tidyverse)     # includes readr & tibble
+
+```
+
+```{r}
+
+customers <- tibble(
+  id = 1:5,
+  city = c("Port Ellen", "Dufftown", NA, "Aberlour", "Tobermory"),
+  postcode = c("PA42 7DU", "AB55 4DH", NA, "AB38 7RY", "PA75 6NR")
+)
+orders <- tibble(
+  id = c(2, 3, 4, 4, 5, 5, 6, 6, 7),
+  items = c(10, 18, 21, 23, 9, 11, 11, 12, 3)
+)
+
+
+```
+

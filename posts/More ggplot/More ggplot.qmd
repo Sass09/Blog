@@ -1,0 +1,116 @@
+---
+title: "More ggplot"
+author: Shifa Maqsood
+---
+
+```{r}
+library(ggplot2)
+
+grades <- data.frame(
+  students = c("A","B","C"),
+  grades = c(2.5,8,4)
+)
+
+ggplot_grades <- ggplot(grades, aes(x= students, y=grades)) +
+  geom_bar(stat ="identity", fill="white", color="blue")+
+  geom_text(aes(label= grades), position = position_dodge(width = 0.9), vjust =- 0.4)+
+  scale_y_continuous(limits = c(0,10), breaks = seq(1,10,1))+
+  theme_classic() +
+  xlab("Students")+
+  ylab("Grades")+
+  ggtitle("Student Performance" )
+
+ggplot_grades
+```
+
+```{r}
+library(ggplot2)
+```
+
+# Scatterplot
+
+```{r}
+
+rate_of_social_risk <- data.frame(
+        Avg_frq_nonsocial_risk = c(0,1,3,4,25,46,55,60),
+        Avg_frq_social_risk = c(12,47,4,41,57,34,57,60)
+)
+
+ggplot_social_risk <-
+  ggplot(rate_of_social_risk, aes(x = Avg_frq_nonsocial_risk, y = Avg_frq_social_risk))+
+  geom_point(shape=18, size=1) +
+  geom_smooth(method = "lm", se= FALSE, color ="black", size=.35)+
+   theme_bw() + theme(panel.border = element_blank(), panel.grid.major = element_blank(),
+panel.grid.minor = element_blank(), axis.line = element_line(colour = "black"))+
+  scale_y_continuous( breaks =seq(0,70,10), expand = c(0, 0) )+
+   scale_x_continuous( breaks =seq(0,70,10),expand = c(0, 0) )+
+  xlab("Average Frequency of Nonsocial Risk")+
+  ylab("Average Frequency of Social Risk")+
+  coord_cartesian(xlim = c(0,70), ylim=c(0,70))
+  
+  
+ggplot_social_risk
+
+```
+#Bargraph
+
+
+```{r}
+
+
+library(ggpubr)
+
+Condition <-rep(c("No \n Transient","Transient"), each=2)
+Location <-rep(c("Outside","Inside"),2)
+MMRT <- c(304,300,290,280)
+CI_upper <-c(315,310,304,290)
+CI_lower <-c(295,290,283,270)
+plot_df <-data.frame(Condition,Location,MMRT,CI_upper,CI_lower)
+plot_df$Location <- factor(plot_df$Location, 
+                         levels = c("Outside","Inside"))
+
+vis<-ggplot(plot_df, aes(x=Condition, y=MMRT, group=Location,
+                    fill=Location))+
+  geom_bar(stat="identity",position="dodge", 
+           color="black",
+           size=.25)+
+  theme_classic()+
+  ylab("Mean Median RT (ms)")+
+  coord_cartesian(ylim=c(230,340))+
+  scale_y_continuous(breaks=seq(230,340,10))+
+  scale_fill_brewer(palette="Greys", direction=-1)+
+   theme(legend.position=c(0.55,0.8),
+        legend.title=element_blank(),
+        legend.key.size = unit(.5, "cm"))+
+  ggtitle("Visual Group")
+
+Condition <-rep(c("No \n Transient","Transient"), each=2)
+Location <-rep(c("Outside","Inside"),2)
+MMRT <- c(295,290,265,250)
+CI_upper <-c(305,300,275,260)
+CI_lower <-c(285,280,255,240)
+plot_df <-data.frame(Condition,Location,MMRT,CI_upper,CI_lower)
+plot_df$Location <- factor(plot_df$Location, 
+                         levels = c("Outside","Inside"))
+
+aud<-ggplot(plot_df, aes(x=Condition, y=MMRT, group=Location,
+                    fill=Location))+
+  geom_bar(stat="identity",position="dodge", 
+           color="black",
+           size=.25)+
+  theme_classic()+
+  ylab("Mean Median RT (ms)")+
+  coord_cartesian(ylim=c(230,340))+
+  scale_y_continuous(breaks=seq(230,340,10))+
+  scale_fill_brewer(palette="Greys", direction=-1)+
+   theme(legend.position="none")+
+  ggtitle("Auditory Group")
+
+ggarrange(vis,aud)
+
+
+
+
+```
+
+
