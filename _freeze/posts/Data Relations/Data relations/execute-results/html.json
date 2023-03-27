@@ -1,0 +1,14 @@
+{
+  "hash": "542d44a46ff361ce041f9ed068c04d57",
+  "result": {
+    "markdown": "`\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\ncustomers <- tibble(\n  id = 1:5,\n  city = c(\"Port Ellen\", \"Dufftown\", NA, \"Aberlour\", \"Tobermory\"),\n  postcode = c(\"PA42 7DU\", \"AB55 4DH\", NA, \"AB38 7RY\", \"PA75 6NR\")\n)\norders <- tibble(\n  id = c(2, 3, 4, 4, 5, 5, 6, 6, 7),\n  items = c(10, 18, 21, 23, 9, 11, 11, 12, 3)\n)\n```\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
