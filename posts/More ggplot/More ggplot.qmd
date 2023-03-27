@@ -52,7 +52,7 @@ panel.grid.minor = element_blank(), axis.line = element_line(colour = "black"))+
 ggplot_social_risk
 
 ```
-#Bargraph
+# Bargraph
 
 
 ```{r}
