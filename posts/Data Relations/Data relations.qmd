@@ -85,6 +85,21 @@ anti2_data
 
 ```{r}
 
+satisfaction <- tibble(
+  id = 1:5,
+  satisfaction = c(4, 3, 2, 3, 1)
+)
+
+
+join_1 <- left_join(customers, orders, by = "id")
+
+
+join_2 <- left_join(join_1, satisfaction, 
+                    by = "id")
+
+
+
+
 pipe_join <- customers %>%
   left_join(orders, by = "id") %>%
   left_join(satisfaction, by = "id")
