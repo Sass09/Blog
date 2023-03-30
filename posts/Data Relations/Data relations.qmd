@@ -5,6 +5,8 @@ library(tidyverse)     # includes readr & tibble
 
 ```
 
+
+# Create data
 ```{r}
 
 customers <- tibble(
@@ -17,6 +19,88 @@ orders <- tibble(
   items = c(10, 18, 21, 23, 9, 11, 11, 12, 3)
 )
 
+
+```
+
+# Mutating Joins
+
+## Left join
+
+```{r}
+left_data <- left_join(customers, orders, by = "id")
+left_data
+left2_data <- left_join(orders, customers, by = "id")
+left2_data
+
+```
+
+## right join
+
+```{r}
+right_data <- right_join(customers, orders, by = "id")
+right_data
+
+
+```
+
+## inner join
+```{r}
+inner_data <- inner_join(customers, orders, by = "id")
+inner_data
+
+
+```
+
+## full join
+```{r}
+full_data <- full_join(customers, orders, by = "id")
+full_data
+
+```
+
+# Filtering Joins 
+## semi join
+```{r}
+#they can keep or remove rows from table
+
+semi_data <- semi_join(customers, orders, by = "id")
+semi_data
+
+semi2_data <- semi_join(orders, customers, by = "id")
+semi2_data
+
+
+```
+
+## anti join
+```{r}
+anti_data <- anti_join(customers, orders, by = "id")
+anti_data
+anti2_data <- anti_join(orders, customers, by = "id")
+anti2_data
+
+```
+
+# Mutliple joins
+
+```{r}
+
+pipe_join <- customers %>%
+  left_join(orders, by = "id") %>%
+  left_join(satisfaction, by = "id")
+
+```
+
+# Binding joins
+```{r}
+new_customers <- tibble(
+  id = 6:9,
+  city = c("Falkirk", "Ardbeg", "Doogal", "Kirkwall"),
+  postcode = c("FK1 4RS", "PA42 7EA", "G81 4SJ", "KW15 1SE")
+)
+
+bindr_data <- bind_rows(customers, new_customers)
+bindr_data
 
 ```
 
