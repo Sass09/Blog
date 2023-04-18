@@ -1,0 +1,64 @@
+---
+title: "Data Import"
+author: Shifa Maqsood
+---
+```{r setup, include=FALSE}
+library(tidyverse)
+
+#three rules for tidy data
+#-Each observation must have its own row
+#-Each variable must have its own column
+#-Each value must have its own cell
+```
+
+# Data Structures 
+
+```{r}
+
+#untidy and tidy data
+
+untidy_data <- read.csv("data/untidy_data.csv")
+#untidy data has two values in one column
+#three years of data 
+#harder to do mathematical operation on it 
+
+tidy_data <- read.csv("data/tidy_data.csv")
+#-organized
+#-has each cell for each value
+#-Each observation must have its own row
+#-Each variable must have its own column
+#-Each value must have its own cell
+tidy_data %>%
+  group_by(customer_id) %>%
+  summarise(
+    total_items = sum(items),
+    total_price = sum(totalprice)
+  )
+
+```
+
+# Reshaping Data
+```{r}
+
+#Wide data and long data conversion
+
+# select just the customer ID and 3 total price columns
+wide_totalprice <- select(
+  .data = untidy_data,
+  customer_id, 
+  `2018` = totalprice_2018,
+  `2019` = totalprice_2019,
+  `2020` = totalprice_2020
+)
+
+long_totalprice <- pivot_longer(
+  data = wide_totalprice,
+  cols = `2018`:`2020`,
+  names_to = "year",
+  values_to = "totalprice")
+
+## Wide to long
+
+
+
+```
