@@ -2,6 +2,7 @@
 title: "Data Wrangling"
 author: Shifa Maqsood
 ---
+
 ```{r}
 library(tidyverse) 
 library(dplyr) # data wrangling functions
@@ -12,6 +13,7 @@ budget <- read_csv("data/budget.csv", show_col_types = FALSE)
 ```
 
 ## Select
+
 ```{r}
 # select single column by name
 product_dat <- budget %>% select(product) 
@@ -45,7 +47,8 @@ sales <- budget %>% select(-expenses_2019, -expenses_2020)
 sales <- budget %>% select(-(expenses_2019:expenses_2020))
 ```
 
-## Filters 
+## Filters
+
 ```{r}
 # select all rows where region equals North
 budget %>% filter(region == "North")
@@ -108,7 +111,8 @@ budget %>%
   arrange(region) # arrange function sorts out data
 ```
 
-## Mutate 
+## Mutate
+
 ```{r}
 budget2 <- budget %>%
   mutate(
@@ -185,4 +189,3 @@ year_prod <- budget4 %>%
 ```
 
 ## Complications
-
