@@ -1,9 +1,10 @@
 ---
-author: Shifa Maqsood
 title: "Data Tidying"
+author: Shifa Maqsood
 ---
 
-```{r setup, include=FALSE}
+
+```{r}
 library(tidyverse)
 ```
 
@@ -137,7 +138,6 @@ glimpse(tidy_data)
 
 # Pipes
 
-
 ```{r}
 untidy_data <- read_csv("data/untidy_data.csv", 
                         show_col_types = FALSE)
@@ -217,4 +217,3 @@ tidy_data <- read_csv(file = "data/untidy_data.csv",
     trim_ws = TRUE
   )
 ```
-

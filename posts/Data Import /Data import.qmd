@@ -65,12 +65,12 @@ export(family, "data/family.csv")
 
 ```
 
-
 ```{r}
 #import data after deleting it  from environment
 try_importing <- import("data/family.csv")
 
 ```
+
 # Convert column types of a data set
 
 ```{r}
@@ -106,7 +106,6 @@ starwars <-read_csv("data/starwars.csv", col_types = ct)
 
 
 ```
-
 
 ```{r}
 df <- data.frame(team=rep(c('A', 'B', 'C'), each=4),
