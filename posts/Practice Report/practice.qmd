@@ -1,9 +1,8 @@
 ---
-
-title: "Video game review report"
+author: shifa Maqsood
+title: "Video game review report" 
 tbl-cap-location: bottom
 ---
-
 ```{r, echo=FALSE, message=FALSE}
 #load libraries
 
@@ -125,7 +124,6 @@ ggplot(data = year_by_verified_counts,
     panel.grid.minor=element_line(colour="lightgrey"))
 
 ```
-
 
 ## Review ratings
 
