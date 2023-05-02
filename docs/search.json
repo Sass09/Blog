@@ -18,7 +18,7 @@
     "href": "index.html",
     "title": "posts",
     "section": "",
-    "text": "Data Import\n\n\n\n\n\n\n\n\n\n\n\n\nShifa Maqsood\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nData Summaries\n\n\n\n\n\n\n\n\n\n\n\n\nShifa Maqsood\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nData Wrangling\n\n\n\n\n\n\n\n\n\n\n\n\nShifa Maqsood\n\n\n\n\n\n\n  \n\n\n\n\nMidterm Part 2\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\nData Vis\n\n\n\n\n\n\n\n\n\n\n\n\nShifa Maqsood\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ntbl-cap-location: bottom\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 3 qmd skill check\n\n\n\n\n\n\n\n\n\n\n\n\nShifa Maqsood\n\n\n\n\n\n\n  \n\n\n\n\nNotes for class\n\n\n\n\n\n\n\n\n\n\n\n\nShifa Maqsood\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCreate data\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nMidterm project part 1\n\n\n\n\n\n\n\n\n\n\n\n\nShifa Maqsood\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nData Tidying\n\n\n\n\n\n\n\n\n\n\n\n\nShifa Maqsood\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMore ggplot\n\n\n\n\n\n\n\n\n\n\n\n\nShifa Maqsood\n\n\n\n\n\n\nNo matching items"
+    "text": "Data Import\n\n\n\n\n\n\n\n\n\n\n\n\nShifa Maqsood\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nData Summaries\n\n\n\n\n\n\n\n\n\n\n\n\nShifa Maqsood\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nData Wrangling\n\n\n\n\n\n\n\n\n\n\n\n\nShifa Maqsood\n\n\n\n\n\n\n  \n\n\n\n\nMidterm Part 2\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\nData Vis\n\n\n\n\n\n\n\n\n\n\n\n\nShifa Maqsood\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ntbl-cap-location: bottom\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 3 qmd skill check\n\n\n\n\n\n\n\n\n\n\n\n\nShifa Maqsood\n\n\n\n\n\n\n  \n\n\n\n\nNotes for class\n\n\n\n\n\n\n\n\n\n\n\n\nShifa Maqsood\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nData Relations\n\n\n\n\n\n\n\n\n\n\n\n\nShifa Maqsood\n\n\n\n\n\n\n  \n\n\n\n\nMidterm project part 1\n\n\n\n\n\n\n\n\n\n\n\n\nShifa Maqsood\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nData Tidying\n\n\n\n\n\n\n\n\n\n\n\n\nShifa Maqsood\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMore ggplot\n\n\n\n\n\n\n\n\n\n\n\n\nShifa Maqsood\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
@@ -114,49 +114,49 @@
   {
     "objectID": "posts/Data Relations/Data relations.html",
     "href": "posts/Data Relations/Data relations.html",
-    "title": "posts",
+    "title": "Data Relations",
     "section": "",
-    "text": "`"
+    "text": "customers <- tibble(\n  id = 1:5,\n  city = c(\"Port Ellen\", \"Dufftown\", NA, \"Aberlour\", \"Tobermory\"),\n  postcode = c(\"PA42 7DU\", \"AB55 4DH\", NA, \"AB38 7RY\", \"PA75 6NR\")\n)\norders <- tibble(\n  id = c(2, 3, 4, 4, 5, 5, 6, 6, 7),\n  items = c(10, 18, 21, 23, 9, 11, 11, 12, 3)\n)"
   },
   {
     "objectID": "posts/Data Relations/Data relations.html#left-join",
     "href": "posts/Data Relations/Data relations.html#left-join",
-    "title": "posts",
+    "title": "Data Relations",
     "section": "Left join",
     "text": "Left join\n\nleft_data <- left_join(customers, orders, by = \"id\")\n\nWarning in left_join(customers, orders, by = \"id\"): Each row in `x` is expected to match at most 1 row in `y`.\nℹ Row 4 of `x` matches multiple rows.\nℹ If multiple matches are expected, set `multiple = \"all\"` to silence this\n  warning.\n\nleft_data\n\n# A tibble: 7 × 4\n     id city       postcode items\n  <dbl> <chr>      <chr>    <dbl>\n1     1 Port Ellen PA42 7DU    NA\n2     2 Dufftown   AB55 4DH    10\n3     3 <NA>       <NA>        18\n4     4 Aberlour   AB38 7RY    21\n5     4 Aberlour   AB38 7RY    23\n6     5 Tobermory  PA75 6NR     9\n7     5 Tobermory  PA75 6NR    11\n\nleft2_data <- left_join(orders, customers, by = \"id\")\nleft2_data\n\n# A tibble: 9 × 4\n     id items city      postcode\n  <dbl> <dbl> <chr>     <chr>   \n1     2    10 Dufftown  AB55 4DH\n2     3    18 <NA>      <NA>    \n3     4    21 Aberlour  AB38 7RY\n4     4    23 Aberlour  AB38 7RY\n5     5     9 Tobermory PA75 6NR\n6     5    11 Tobermory PA75 6NR\n7     6    11 <NA>      <NA>    \n8     6    12 <NA>      <NA>    \n9     7     3 <NA>      <NA>"
   },
   {
     "objectID": "posts/Data Relations/Data relations.html#right-join",
     "href": "posts/Data Relations/Data relations.html#right-join",
-    "title": "posts",
+    "title": "Data Relations",
     "section": "right join",
     "text": "right join\n\nright_data <- right_join(customers, orders, by = \"id\")\n\nWarning in right_join(customers, orders, by = \"id\"): Each row in `x` is expected to match at most 1 row in `y`.\nℹ Row 4 of `x` matches multiple rows.\nℹ If multiple matches are expected, set `multiple = \"all\"` to silence this\n  warning.\n\nright_data\n\n# A tibble: 9 × 4\n     id city      postcode items\n  <dbl> <chr>     <chr>    <dbl>\n1     2 Dufftown  AB55 4DH    10\n2     3 <NA>      <NA>        18\n3     4 Aberlour  AB38 7RY    21\n4     4 Aberlour  AB38 7RY    23\n5     5 Tobermory PA75 6NR     9\n6     5 Tobermory PA75 6NR    11\n7     6 <NA>      <NA>        11\n8     6 <NA>      <NA>        12\n9     7 <NA>      <NA>         3"
   },
   {
     "objectID": "posts/Data Relations/Data relations.html#inner-join",
     "href": "posts/Data Relations/Data relations.html#inner-join",
-    "title": "posts",
+    "title": "Data Relations",
     "section": "inner join",
     "text": "inner join\n\ninner_data <- inner_join(customers, orders, by = \"id\")\n\nWarning in inner_join(customers, orders, by = \"id\"): Each row in `x` is expected to match at most 1 row in `y`.\nℹ Row 4 of `x` matches multiple rows.\nℹ If multiple matches are expected, set `multiple = \"all\"` to silence this\n  warning.\n\ninner_data\n\n# A tibble: 6 × 4\n     id city      postcode items\n  <dbl> <chr>     <chr>    <dbl>\n1     2 Dufftown  AB55 4DH    10\n2     3 <NA>      <NA>        18\n3     4 Aberlour  AB38 7RY    21\n4     4 Aberlour  AB38 7RY    23\n5     5 Tobermory PA75 6NR     9\n6     5 Tobermory PA75 6NR    11"
   },
   {
     "objectID": "posts/Data Relations/Data relations.html#full-join",
     "href": "posts/Data Relations/Data relations.html#full-join",
-    "title": "posts",
+    "title": "Data Relations",
     "section": "full join",
     "text": "full join\n\nfull_data <- full_join(customers, orders, by = \"id\")\n\nWarning in full_join(customers, orders, by = \"id\"): Each row in `x` is expected to match at most 1 row in `y`.\nℹ Row 4 of `x` matches multiple rows.\nℹ If multiple matches are expected, set `multiple = \"all\"` to silence this\n  warning.\n\nfull_data\n\n# A tibble: 10 × 4\n      id city       postcode items\n   <dbl> <chr>      <chr>    <dbl>\n 1     1 Port Ellen PA42 7DU    NA\n 2     2 Dufftown   AB55 4DH    10\n 3     3 <NA>       <NA>        18\n 4     4 Aberlour   AB38 7RY    21\n 5     4 Aberlour   AB38 7RY    23\n 6     5 Tobermory  PA75 6NR     9\n 7     5 Tobermory  PA75 6NR    11\n 8     6 <NA>       <NA>        11\n 9     6 <NA>       <NA>        12\n10     7 <NA>       <NA>         3"
   },
   {
     "objectID": "posts/Data Relations/Data relations.html#semi-join",
     "href": "posts/Data Relations/Data relations.html#semi-join",
-    "title": "posts",
+    "title": "Data Relations",
     "section": "semi join",
     "text": "semi join\n\n#they can keep or remove rows from table\n\nsemi_data <- semi_join(customers, orders, by = \"id\")\nsemi_data\n\n# A tibble: 4 × 3\n     id city      postcode\n  <int> <chr>     <chr>   \n1     2 Dufftown  AB55 4DH\n2     3 <NA>      <NA>    \n3     4 Aberlour  AB38 7RY\n4     5 Tobermory PA75 6NR\n\nsemi2_data <- semi_join(orders, customers, by = \"id\")\nsemi2_data\n\n# A tibble: 6 × 2\n     id items\n  <dbl> <dbl>\n1     2    10\n2     3    18\n3     4    21\n4     4    23\n5     5     9\n6     5    11"
   },
   {
     "objectID": "posts/Data Relations/Data relations.html#anti-join",
     "href": "posts/Data Relations/Data relations.html#anti-join",
-    "title": "posts",
+    "title": "Data Relations",
     "section": "anti join",
     "text": "anti join\n\nanti_data <- anti_join(customers, orders, by = \"id\")\nanti_data\n\n# A tibble: 1 × 3\n     id city       postcode\n  <int> <chr>      <chr>   \n1     1 Port Ellen PA42 7DU\n\nanti2_data <- anti_join(orders, customers, by = \"id\")\nanti2_data\n\n# A tibble: 3 × 2\n     id items\n  <dbl> <dbl>\n1     6    11\n2     6    12\n3     7     3"
   },
@@ -221,7 +221,7 @@
     "href": "posts/Data Wrangling/Data Wrangling.html#complications",
     "title": "Data Wrangling",
     "section": "Complications",
-    "text": "Complications"
+    "text": "Complications\n\nyear_prod %>%\n  mutate(across(.cols = mean_sales:max_profit, \n                .fns = round))\n\n# A tibble: 4 × 6\n  year  product mean_sales mean_expenses min_profit max_profit\n  <chr> <chr>        <dbl>         <dbl>      <dbl>      <dbl>\n1 2019  gadgets        882           238      -2632        517\n2 2019  widgets        789           452      -1307        150\n3 2020  gadgets       -199           804       -562       2390\n4 2020  widgets       -307          -220      -1105       2122\n\n\n\nround(0.5)\n\n[1] 0\n\nround(1.5)\n\n[1] 2\n\n\n\n#!!!!!! redefining round so 5s round up !!!!!! \nround <- function(x, digits = 0) {\n  posneg = sign(x)\n  z = abs(x)*10^digits\n  z = z + 0.5 + sqrt(.Machine$double.eps)\n  z = trunc(z)\n  z = z/10^digits\n  z*posneg\n}\n\n\n# remove new round() method\nrm(round)\n\n\nmissing_bad <- budget4 %>%\n  mutate(expenses = ifelse(\n    test = year == 2020 & region == \"South\", \n    yes = 0, # value if above conditions are met\n    no = expenses # value if above conditions are not met\n  ))\n\n\nmissing_bad <- budget4 %>%\n  mutate(expenses = case_when(\n    # set to 0 when year is 2020 and region is North\n    year == 2020 & region == \"South\" ~ 0, \n    # otherwise, set to the value in the expenses column\n    TRUE ~ expenses   \n  ))\n\n\n# set sales values to \"missing\" for North 2020 rows\nmissing_bad <- missing_bad %>%\n  mutate(sales = ifelse(year == 2020 & region == \"North\", \n                        \"missing\", \n                        sales))\n\n# check structure of data, sales now character\nstr(missing_bad)\n\ntibble [16 × 5] (S3: tbl_df/tbl/data.frame)\n $ region  : chr [1:16] \"North\" \"North\" \"North\" \"North\" ...\n $ product : chr [1:16] \"widgets\" \"widgets\" \"gadgets\" \"gadgets\" ...\n $ year    : chr [1:16] \"2019\" \"2020\" \"2019\" \"2020\" ...\n $ sales   : chr [1:16] \"2129\" \"missing\" \"723\" \"missing\" ...\n $ expenses: num [1:16] 822 -897 1037 1115 1004 ..."
   },
   {
     "objectID": "posts/Data Tidying/Data Tidying.html",

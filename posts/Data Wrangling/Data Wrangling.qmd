@@ -189,3 +189,63 @@ year_prod <- budget4 %>%
 ```
 
 ## Complications
+```{r}
+year_prod %>%
+  mutate(across(.cols = mean_sales:max_profit, 
+                .fns = round))
+```
+
+```{r}
+round(0.5)
+round(1.5)
+```
+
+
+```{r}
+#!!!!!! redefining round so 5s round up !!!!!! 
+round <- function(x, digits = 0) {
+  posneg = sign(x)
+  z = abs(x)*10^digits
+  z = z + 0.5 + sqrt(.Machine$double.eps)
+  z = trunc(z)
+  z = z/10^digits
+  z*posneg
+}
+```
+
+```{r}
+# remove new round() method
+rm(round)
+```
+
+```{r}
+missing_bad <- budget4 %>%
+  mutate(expenses = ifelse(
+    test = year == 2020 & region == "South", 
+    yes = 0, # value if above conditions are met
+    no = expenses # value if above conditions are not met
+  ))
+```
+
+```{r}
+missing_bad <- budget4 %>%
+  mutate(expenses = case_when(
+    # set to 0 when year is 2020 and region is North
+    year == 2020 & region == "South" ~ 0, 
+    # otherwise, set to the value in the expenses column
+    TRUE ~ expenses   
+  ))
+
+```
+
+```{r}
+# set sales values to "missing" for North 2020 rows
+missing_bad <- missing_bad %>%
+  mutate(sales = ifelse(year == 2020 & region == "North", 
+                        "missing", 
+                        sales))
+
+# check structure of data, sales now character
+str(missing_bad)
+```
+

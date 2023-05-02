@@ -1,12 +1,18 @@
-`
+---
+author: Shifa Maqsood
+title: "Data Relations"
+---
+
+
+
 ```{r setup, include=FALSE}
 
 library(tidyverse)     # includes readr & tibble
 
 ```
 
-
 # Create data
+
 ```{r}
 
 customers <- tibble(
@@ -44,6 +50,7 @@ right_data
 ```
 
 ## inner join
+
 ```{r}
 inner_data <- inner_join(customers, orders, by = "id")
 inner_data
@@ -52,14 +59,17 @@ inner_data
 ```
 
 ## full join
+
 ```{r}
 full_data <- full_join(customers, orders, by = "id")
 full_data
 
 ```
 
-# Filtering Joins 
+# Filtering Joins
+
 ## semi join
+
 ```{r}
 #they can keep or remove rows from table
 
@@ -73,6 +83,7 @@ semi2_data
 ```
 
 ## anti join
+
 ```{r}
 anti_data <- anti_join(customers, orders, by = "id")
 anti_data
@@ -107,6 +118,7 @@ pipe_join <- customers %>%
 ```
 
 # Binding joins
+
 ```{r}
 new_customers <- tibble(
   id = 6:9,
@@ -118,4 +130,3 @@ bindr_data <- bind_rows(customers, new_customers)
 bindr_data
 
 ```
-
