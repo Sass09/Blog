@@ -1,0 +1,25 @@
+---
+author: Shifa Maqsood
+title: "Tidy Tuesday"
+---
+
+```{r}
+tuesdata <- tidytuesdayR::tt_load('2023-05-02')
+
+plots <- tuesdata$plots
+species <- tuesdata$species
+surveys <- tuesdata$surveys
+
+```
+
+```{r}
+mice_count_by_year <-surveys %>%
+  group_by(year) %>%
+  count()
+
+ggplot(mice_count_by_year, aes(x= year, y=n))+
+  geom_line()+
+  ggtitle ("Mice count by year")+
+  scale_x_continuous(breaks =seq(1980, 2020,5))
+```
+
