@@ -22,4 +22,11 @@ ggplot(mice_count_by_year, aes(x= year, y=n))+
   ggtitle ("Mice count by year")+
   scale_x_continuous(breaks =seq(1980, 2020,5))
 ```
+# Bob Ross Paintings
+```{r}
+
+
+
+
+```
 
