@@ -1,0 +1,96 @@
+---
+author: Shifa Maqsood
+title: "Customization"
+---
+
+```{r}
+library(tidyverse)   # data wrangling functions
+library(ggthemes)    # for themes
+library(patchwork)   # for combining plots
+library(plotly)      # for interactive plots
+# devtools::install_github("hrbrmstr/waffle")
+library(waffle)      # for waffle plots
+library(ggbump)      # for bump plots
+library(treemap)     # for treemap plots
+library(ggwordcloud) # for word clouds
+library(tidytext)    # for manipulating text for word clouds
+library(sf)          # for mapping geoms
+library(rnaturalearth) # for map data
+library(rnaturalearthdata) # extra mapping data
+library(gganimate)   # for animated plots
+
+theme_set(theme_light())
+
+```
+
+```{r}
+ct <- cols(issue_category = col_factor(levels = c("tech", "returns", "sales", "other")))
+
+# load data
+survey_data <- read_csv(file = "data/survey_data.csv",
+                        col_types = ct)
+
+```
+
+```{r}
+# create bar plot
+bar <- ggplot(data = survey_data, 
+              mapping = aes(x = issue_category,
+                            fill = issue_category)) +
+  geom_bar(show.legend = FALSE) +
+  labs(x = "Issue Category", 
+       y = "Count",
+       title = "Calls by Issue Category")
+
+#create scatterplot
+point <- ggplot(data = survey_data, 
+                mapping = aes(x = wait_time, 
+                              y = call_time,
+                              color = issue_category)) +
+  geom_point(alpha = 0.5) +
+  geom_smooth(method = lm, formula = y~x) +
+  labs(x = "Wait Time",
+       y = "Call Time",
+       color = "Issue Category",
+  
+            title = "Wait Time by Call Time")
+bar + point
+
+```
+
+```{r}
+bar +
+  # add left-justified text to the second bar
+  annotate(geom = "text",
+           label = "Our goal is to\nreduce this\ncategory",
+           x = 1.65, y = 150,
+           hjust = 0, vjust = 1, 
+           color = "white", fontface = "bold",
+           angle = 45) +
+  # add a centred label to the third bar
+  annotate(geom = "label",
+           label = "Our goal is\nto increase this\ncategory",
+           x = 3, y = 75,
+           hjust = 0.5, vjust = 1, 
+           color = " darkturquoise", fontface = "bold")
+```
+
+```{r}
+survey_data <- read_csv(file = "data/survey_data.csv",
+                        show_col_types = FALSE)
+
+ggplot(survey_data, aes(x = wait_time)) +
+  geom_histogram()
+```
+
+```{r}
+survey_data %>% 
+  count(issue_category) %>%
+  treemap(
+    index = "issue_category", # column with number of rectangles
+    vSize = "n", # column with size of rectangle
+    title = "",
+    palette = "BuPu",
+    inflate.labels = TRUE # expand labels to size of rectangle
+  )
+```

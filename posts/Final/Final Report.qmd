@@ -5,6 +5,7 @@ author: Shifa Maqsood
 
 ```{r}
 library(tidyverse)
+
 #ArtHistorytidytuesday
 
 tuesdata <- tidytuesdayR::tt_load('2023-01-17')
@@ -24,3 +25,22 @@ count_of_artistsggplot <- ggplot(count_of_artists, aes(x= year, y=n)) +
 
 count_of_artistsggplot 
 ```
+
+```{r}
+
+survivalists <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2023/2023-01-24/survivalists.csv')
+loadouts <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2023/2023-01-24/loadouts.csv')
+episodes <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2023/2023-01-24/episodes.csv')
+seasons <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2023/2023-01-24/seasons.csv')
+
+popularloadout <- loadouts %>%
+  group_by(item) %>%
+  count()
+
+num_of_survivalists <- survivalists %>%
+  
+  
+
+
+```
+
