@@ -2,6 +2,7 @@
 title: "Data Summaries"
 author: Shifa Maqsood
 ---
+
 ```{r setup, include=FALSE}
 library(tidyverse)   # data wrangling functions
 
@@ -10,6 +11,7 @@ library(kableExtra)  # for nice tables
 ```
 
 # Social media data and summarise ()
+
 ```{r}
 tweets <- readRDS("ncod_tweets.rds")
 favourite_summary <- summarise(tweets,
@@ -19,8 +21,6 @@ favourite_summary <- summarise(tweets,
                            max_favs = max(favorite_count))
 
 ```
-
-
 
 ```{r}
 tweet_summary <- tweets %>%
@@ -33,12 +33,7 @@ tweet_summary <- tweets %>%
 glimpse(tweet_summary)
 ```
 
-
-
-
-
-**GGPLOT of favorite_count** 
-
+**GGPLOT of favorite_count**
 
 ```{r}
 ggplot(tweets, aes(x = favorite_count)) +
@@ -81,7 +76,7 @@ date_to <- tweet_summary$max_date %>%
 ```
 
 There were `r tweet_summary$n` tweets between `r date_from` and `r date_to`.
- 
+
 ```{r}
 verified <- 
   tweets %>% # Start with the original dataset; and then
@@ -96,8 +91,7 @@ verified
 
 
 ```
- 
- 
+
 ```{r}
 most_fav <- tweets %>%
   group_by(is_quote) %>%
@@ -108,8 +102,9 @@ most_fav <- tweets %>%
 
 
 ```
- 
+
 # Inline coding 2
+
 ```{r}
 
 tweets_per_user <- tweets %>%
@@ -125,9 +120,9 @@ most_prolific_n <- slice(tweets_per_user, 1) %>%
 
 
 ```
- There were `r unique_users` unique accounts tweeting about #NationalComingOutDay. `r most_prolific` was the most prolific tweeter, with `r most_prolific_n` tweets.
- 
- 
+
+There were `r unique_users` unique accounts tweeting about #NationalComingOutDay. `r most_prolific` was the most prolific tweeter, with `r most_prolific_n` tweets.
+
 # Extra challenge problem
 
 ```{r}
@@ -160,22 +155,3 @@ corrected_nydata <-cols(
 
 summary_nydata
 ```
-
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 

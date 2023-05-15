@@ -18,7 +18,7 @@
     "href": "index.html",
     "title": "posts",
     "section": "",
-    "text": "Data Import\n\n\n\n\n\n\n\n\n\n\n\n\nShifa Maqsood\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nData Summaries\n\n\n\n\n\n\n\n\n\n\n\n\nShifa Maqsood\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nData Wrangling\n\n\n\n\n\n\n\n\n\n\n\n\nShifa Maqsood\n\n\n\n\n\n\n  \n\n\n\n\nMidterm Part 2\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\nData Vis\n\n\n\n\n\n\n\n\n\n\n\n\nShifa Maqsood\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nVideo game review report\n\n\n\n\n\n\n\n\n\n\n\n\nshifa Maqsood\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 3 qmd skill check\n\n\n\n\n\n\n\n\n\n\n\n\nShifa Maqsood\n\n\n\n\n\n\n  \n\n\n\n\nNotes for class\n\n\n\n\n\n\n\n\n\n\n\n\nShifa Maqsood\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nData Relations\n\n\n\n\n\n\n\n\n\n\n\n\nShifa Maqsood\n\n\n\n\n\n\n  \n\n\n\n\nMidterm project part 1\n\n\n\n\n\n\n\n\n\n\n\n\nShifa Maqsood\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nData Tidying\n\n\n\n\n\n\n\n\n\n\n\n\nShifa Maqsood\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMore ggplot\n\n\n\n\n\n\n\n\n\n\n\n\nShifa Maqsood\n\n\n\n\n\n\nNo matching items"
+    "text": "Data Import\n\n\n\n\n\n\n\n\n\n\n\n\nShifa Maqsood\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nData Summaries\n\n\n\n\n\n\n\n\n\n\n\n\nShifa Maqsood\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nData Wrangling\n\n\n\n\n\n\n\n\n\n\n\n\nShifa Maqsood\n\n\n\n\n\n\n  \n\n\n\n\nMidterm Part 2\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\nData Vis\n\n\n\n\n\n\n\n\n\n\n\n\nShifa Maqsood\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nVideo game review report\n\n\n\n\n\n\n\n\n\n\n\n\nshifa Maqsood\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTidy Tuesday\n\n\n\n\n\n\n\n\n\n\n\n\nShifa Maqsood\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 3 qmd skill check\n\n\n\n\n\n\n\n\n\n\n\n\nShifa Maqsood\n\n\n\n\n\n\n  \n\n\n\n\nNotes for class\n\n\n\n\n\n\n\n\n\n\n\n\nShifa Maqsood\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nData Relations\n\n\n\n\n\n\n\n\n\n\n\n\nShifa Maqsood\n\n\n\n\n\n\n  \n\n\n\n\nMidterm project part 1\n\n\n\n\n\n\n\n\n\n\n\n\nShifa Maqsood\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFinal Report (Tidy Tuesday)\n\n\n\n\n\n\n\n\n\n\n\n\nShifa Maqsood\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nData Tidying\n\n\n\n\n\n\n\n\n\n\n\n\nShifa Maqsood\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMore ggplot\n\n\n\n\n\n\n\n\n\n\n\n\nShifa Maqsood\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHabits\n\n\n\n\n\n\n\n\n\n\n\n\nJohn Doe\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
@@ -250,5 +250,33 @@
     "title": "Video game review report",
     "section": "Review ratings",
     "text": "Review ratings\n\nOverall\nAmazon review ratings are provided on a scale of 1 (worst) to 5 (best) stars. The histogram below shows the total number of reviews assigned each rating.\n\n\n\n\n\n\n\nBy purchase status\nHowever, if you break this data down by verified purchases status you can see that whilst the number of verified and unverified reviews with 1 to 4 star reviews are similar, there is a very large number of 5 star reviews for verified purchases compared to unverified purchases.\n\n#Get number of reviews per year\n\nrating_by_verified_counts <- review_data %>%\n\n  group_by(rating,verified) %>%\n\n  summarize(counts = n())\n\n`summarise()` has grouped output by 'rating'. You can override using the\n`.groups` argument.\n\n#ggplot(data = reviews_by_year, mapping = aes(x=year, y=counts))\n\n#ggplot(reviews_by_year, aes(x=year, y=counts))\n\n# plot\n\nggplot(data = rating_by_verified_counts, \n\n       mapping = aes(x=rating, \n\n                     y=counts, \n\n                     group = verified,\n\n                     fill = verified))+\n\n  geom_bar(stat= \"identity\", position = \"dodge\")+\n\n  xlab(\"\")+\n\n  ylab(\"\")+\n\n  ggtitle(\"Review Ratings\",\n\n          subtitle = \"By purchase status\")+\n\n  theme(\n\n    panel.background = element_rect(fill = \"lightgrey\",\n\n                                colour = \"lightgrey\",\n\n                                linewidth = 0.5, linetype = \"solid\"),\n\n    panel.grid.major=element_line(colour=\"black\",linewidth = .05),\n\n    panel.grid.minor=element_line(colour=\"lightgrey\"))"
+  },
+  {
+    "objectID": "posts/prsentations/presenation.html#going-to-sleep",
+    "href": "posts/prsentations/presenation.html#going-to-sleep",
+    "title": "Habits",
+    "section": "Going to sleep",
+    "text": "Going to sleep\n\nGet in bed\nCount sheep"
+  },
+  {
+    "objectID": "posts/Tidy Tuesday/Tidy Tuesday.html",
+    "href": "posts/Tidy Tuesday/Tidy Tuesday.html",
+    "title": "Tidy Tuesday",
+    "section": "",
+    "text": "library(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.0     ✔ readr     2.1.4\n✔ forcats   1.0.0     ✔ stringr   1.5.0\n✔ ggplot2   3.4.1     ✔ tibble    3.1.8\n✔ lubridate 1.9.2     ✔ tidyr     1.3.0\n✔ purrr     1.0.1     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the \u001b]8;;http://conflicted.r-lib.org/\u0007conflicted package\u001b]8;;\u0007 to force all conflicts to become errors\n\ntuesdata <- tidytuesdayR::tt_load('2023-05-02')\n\n--- Compiling #TidyTuesday Information for 2023-05-02 ----\n--- There are 3 files available ---\n--- Starting Download ---\n\n\n\n    Downloading file 1 of 3: `plots.csv`\n    Downloading file 2 of 3: `species.csv`\n    Downloading file 3 of 3: `surveys.csv`\n\n\n--- Download complete ---\n\nplots <- tuesdata$plots\nspecies <- tuesdata$species\nsurveys <- tuesdata$surveys\n\n\nmice_count_by_year <- surveys %>%\n  group_by(year) %>%\n  count()\n\nggplot(mice_count_by_year, aes(x= year, y=n))+\n  geom_line()+\n  ggtitle (\"Mice count by year\")+\n  scale_x_continuous(breaks =seq(1980, 2020,5))\n\n\n\n\n\nBob Ross Paintings"
+  },
+  {
+    "objectID": "posts/Final/Final Report.html",
+    "href": "posts/Final/Final Report.html",
+    "title": "Final Report (Tidy Tuesday)",
+    "section": "",
+    "text": "library(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.0     ✔ readr     2.1.4\n✔ forcats   1.0.0     ✔ stringr   1.5.0\n✔ ggplot2   3.4.1     ✔ tibble    3.1.8\n✔ lubridate 1.9.2     ✔ tidyr     1.3.0\n✔ purrr     1.0.1     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the \u001b]8;;http://conflicted.r-lib.org/\u0007conflicted package\u001b]8;;\u0007 to force all conflicts to become errors\n\n#ArtHistorytidytuesday\n\ntuesdata <- tidytuesdayR::tt_load('2023-01-17')\n\n--- Compiling #TidyTuesday Information for 2023-01-17 ----\n--- There is 1 file available ---\n--- Starting Download ---\n\n\n\n    Downloading file 1 of 1: `artists.csv`\n\n\n--- Download complete ---\n\narthistory <-tuesdata[[\"artists\"]]\n\ncount_of_artists <- arthistory %>%\n  group_by(year) %>%\n  count()\n\ncount_of_artistsggplot <- ggplot(count_of_artists, aes(x= year, y=n)) +\n  geom_bar(stat=\"identity\",position=\"dodge\", fill=\"darkgreen\") +\n  scale_x_continuous(breaks = seq(1925,2025,25))+\n  scale_y_continuous(breaks =seq(0,200, 50))+\n  ggtitle(\"Overall Count of Artists in Gardener's Art Throughout the Ages\")+\n  ylab(\"Count\")+\n  xlab(\"Year of Publication\")\n\ncount_of_artistsggplot"
+  },
+  {
+    "objectID": "posts/prsentations/presenation.html",
+    "href": "posts/prsentations/presenation.html",
+    "title": "Habits",
+    "section": "",
+    "text": "Turn off alarm\nGet out of bed\n\n\n\n\nGet in bed\nCount sheep"
   }
 ]

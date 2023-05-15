@@ -1,0 +1,16 @@
+{
+  "hash": "5d0ec93d8b74024999f667059253fdab",
+  "result": {
+    "markdown": "---\nauthor: Shifa Maqsood\ntitle: \"Tidy Tuesday\"\n---\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(tidyverse)\n```\n\n::: {.cell-output .cell-output-stderr}\n```\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.0     ✔ readr     2.1.4\n✔ forcats   1.0.0     ✔ stringr   1.5.0\n✔ ggplot2   3.4.1     ✔ tibble    3.1.8\n✔ lubridate 1.9.2     ✔ tidyr     1.3.0\n✔ purrr     1.0.1     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the \u001b]8;;http://conflicted.r-lib.org/\u0007conflicted package\u001b]8;;\u0007 to force all conflicts to become errors\n```\n:::\n\n```{.r .cell-code}\ntuesdata <- tidytuesdayR::tt_load('2023-05-02')\n```\n\n::: {.cell-output .cell-output-stderr}\n```\n--- Compiling #TidyTuesday Information for 2023-05-02 ----\n--- There are 3 files available ---\n--- Starting Download ---\n```\n:::\n\n::: {.cell-output .cell-output-stdout}\n```\n\n\tDownloading file 1 of 3: `plots.csv`\n\tDownloading file 2 of 3: `species.csv`\n\tDownloading file 3 of 3: `surveys.csv`\n```\n:::\n\n::: {.cell-output .cell-output-stderr}\n```\n--- Download complete ---\n```\n:::\n\n```{.r .cell-code}\nplots <- tuesdata$plots\nspecies <- tuesdata$species\nsurveys <- tuesdata$surveys\n```\n:::\n\n::: {.cell}\n\n```{.r .cell-code}\nmice_count_by_year <- surveys %>%\n  group_by(year) %>%\n  count()\n\nggplot(mice_count_by_year, aes(x= year, y=n))+\n  geom_line()+\n  ggtitle (\"Mice count by year\")+\n  scale_x_continuous(breaks =seq(1980, 2020,5))\n```\n\n::: {.cell-output-display}\n![](Tidy-Tuesday_files/figure-html/unnamed-chunk-2-1.png){width=672}\n:::\n:::\n\n\n# Bob Ross Paintings\n\n\n::: {.cell}\n\n:::\n",
+    "supporting": [
+      "Tidy-Tuesday_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

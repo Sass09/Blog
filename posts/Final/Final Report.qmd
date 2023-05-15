@@ -1,0 +1,26 @@
+---
+title: "Final Report (Tidy Tuesday)"
+author: Shifa Maqsood
+---
+
+```{r}
+library(tidyverse)
+#ArtHistorytidytuesday
+
+tuesdata <- tidytuesdayR::tt_load('2023-01-17')
+arthistory <-tuesdata[["artists"]]
+
+count_of_artists <- arthistory %>%
+  group_by(year) %>%
+  count()
+
+count_of_artistsggplot <- ggplot(count_of_artists, aes(x= year, y=n)) +
+  geom_bar(stat="identity",position="dodge", fill="darkgreen") +
+  scale_x_continuous(breaks = seq(1925,2025,25))+
+  scale_y_continuous(breaks =seq(0,200, 50))+
+  ggtitle("Overall Count of Artists in Gardener's Art Throughout the Ages")+
+  ylab("Count")+
+  xlab("Year of Publication")
+
+count_of_artistsggplot 
+```
