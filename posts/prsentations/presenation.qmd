@@ -1,15 +1,15 @@
 ---
-title: "Habits"
-author: "John Doe"
+title: "Presentation"
+author: "Shifa Maqsood"
 format: revealjs
 ---
 
-# Getting up
+## What is my favorite food?
 
--   Turn off alarm
--   Get out of bed
+-   Vodka Pasta currently ofc without Vodka :D
+-   Korean chicken. Plz try bbq chicken in nyc. sooo good.
 
-## Going to sleep
+## My fav thing about this class
 
 -   Get in bed
 -   Count sheep
