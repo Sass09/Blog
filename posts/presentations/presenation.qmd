@@ -1,0 +1,20 @@
+---
+title: "Reveal Js" 
+author: "Shifa Maqsood"
+
+format: 
+  revealjs:
+    incremental: true
+    theme: blood
+---
+
+## What is my favorite food? {data-background="/Users/shifamaqsood/Desktop/Data Analytics/Blog/posts/presentations/image/Cat.jpg"}
+
+-   Vodka Pasta currently ofc without Vodka :D
+-   Korean chicken. Plz try bb.q chicken in nyc. sooo good.
+
+## My fav thing about this class
+
+-   learned about google color picker
+-   beautiful graphs
+-   obviously more
