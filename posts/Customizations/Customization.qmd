@@ -8,7 +8,6 @@ library(tidyverse)   # data wrangling functions
 library(ggthemes)    # for themes
 library(patchwork)   # for combining plots
 library(plotly)      # for interactive plots
-# devtools::install_github("hrbrmstr/waffle")
 library(waffle)      # for waffle plots
 library(ggbump)      # for bump plots
 library(treemap)     # for treemap plots
