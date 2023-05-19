@@ -5,6 +5,7 @@ author: Shifa Maqsood
 
 ```{r}
 library(tidyverse)
+library(treemap)
 
 #ArtHistorytidytuesday
 
