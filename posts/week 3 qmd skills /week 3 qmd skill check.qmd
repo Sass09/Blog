@@ -17,7 +17,6 @@ Source editor is where you usually do coding so it is more like the underlying c
 
 4. Be able to insert simple markdown plain text (headers, lists, paragraphs), and render the document.
 
-
 #Header 1
 
 ~~strikethrough~~
@@ -26,10 +25,10 @@ Source editor is where you usually do coding so it is more like the underlying c
 
 <https://quarto.org>
 
-* unordered list
-    + sub-item 1
-    + sub-item 2
-        - sub-sub-item 1
+-   unordered list
+    -   sub-item 1
+    -   sub-item 2
+        -   sub-sub-item 1
 
 5. Be aware of resources to help you learn more about markdown options.
 

@@ -27,19 +27,32 @@ count_of_artistsggplot
 ```
 
 ```{r}
+#Alone 
 
-survivalists <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2023/2023-01-24/survivalists.csv')
 loadouts <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2023/2023-01-24/loadouts.csv')
-episodes <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2023/2023-01-24/episodes.csv')
-seasons <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2023/2023-01-24/seasons.csv')
 
 popularloadout <- loadouts %>%
   group_by(item) %>%
-  count()
-
-num_of_survivalists <- survivalists %>%
+  count() %>%
+treemap(
+  index = "item",
+  vSize = "n",
+  title= "",
+  inflate.labels =TRUE
   
+)
+```
+
+```{r}
+age_gaps <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2023/2023-02-14/age_gaps.csv', show_col_types = FALSE)
+
+#which movies had couples with more than 40 years of age difference? 
+highest_age_gap <- age_gaps %>%
+select(movie_name,age_difference) %>%
+  filter(age_difference > 40)
+
+ggplot(highest_age_gap, aes(movie_name, age_difference))+
+  geom_bar(stat = "identity", position = "dodge", fill="#541296" )
+
   
-
-
 ```

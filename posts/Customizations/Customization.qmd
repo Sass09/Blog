@@ -1,6 +1,8 @@
 ---
 author: Shifa Maqsood
 title: "Customization"
+execute: 
+  error: true
 ---
 
 ```{r}

@@ -3,8 +3,6 @@ author: Shifa Maqsood
 title: "Data Relations"
 ---
 
-
-
 ```{r setup, include=FALSE}
 
 library(tidyverse)     # includes readr & tibble

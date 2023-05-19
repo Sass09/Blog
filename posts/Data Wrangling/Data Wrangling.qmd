@@ -189,6 +189,7 @@ year_prod <- budget4 %>%
 ```
 
 ## Complications
+
 ```{r}
 year_prod %>%
   mutate(across(.cols = mean_sales:max_profit, 
@@ -199,7 +200,6 @@ year_prod %>%
 round(0.5)
 round(1.5)
 ```
-
 
 ```{r}
 #!!!!!! redefining round so 5s round up !!!!!! 
@@ -248,4 +248,3 @@ missing_bad <- missing_bad %>%
 # check structure of data, sales now character
 str(missing_bad)
 ```
-
