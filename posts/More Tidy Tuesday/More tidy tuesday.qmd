@@ -1,5 +1,9 @@
 ```{r}
 
+library(tidyverse)
+library(dplyr)
+library(ggplot2)
+
 tuesdata <- tidytuesdayR::tt_load('2023-11-07')
 
 house <-tuesdata$house
@@ -22,28 +26,27 @@ mostvotes <- cleandata %>%
   group_by(state, party) %>%
   summarise( total = sum(totalvotes))
   
+plott <- ggplot(data = mostvotes, mapping = aes(x =state, y= total, fill= party))+
+  geom_bar(stat = "identity", position = "dodge")+
+  theme(axis.text.x = element_text(angle = 60, vjust = 0.5, hjust =1))
+
+plott + theme(plot.margin = unit(c(0,-2,0,-2), "cm"))
+
+#states are overcrowdwed 
+#need ro adjust the x discrete scale
 
 
-#totalvotes <- cleandata %>%
-             #group_by(state) %>%
- # mutate(percent = totalvotes/sum(totalvotes)) %>%
- # mutate(party = factor(party,
-                        #levels = c("DEMOCRAT", "REPUBLICAN"))) %>%
-        # ggplot(aes(x = state,
-                   # y= totalvotes,
-                    #fill = party)) +
-           #geom_bar(stat = "identity") +
-           #theme_bw() +
-       # geom_text(aes(label = scales:: percent(percent, accuracy = 1)),
-        #          position = position_stack(vjust = .5)) 
-          
+
+
+
+
+
+
+
+
+
+
          
-
-
-
-#very crowded data
-# what can i do to improve it further? 
-#abbreviate srate names?
 
 
 ```
