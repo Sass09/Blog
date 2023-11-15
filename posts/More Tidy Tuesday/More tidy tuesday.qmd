@@ -9,44 +9,71 @@ tuesdata <- tidytuesdayR::tt_load('2023-11-07')
 house <-tuesdata$house
 
 
+
+
 ```
 
 ```{r}
 
+
 cleandata<-house %>%
-  filter(stage == "GEN" & year== "2022") %>%
-  select(state_po, stage, party, totalvotes) %>%
+ filter(stage == "GEN" & year== "2022") %>%
+  select(state, stage, party, candidatevotes) %>%
   drop_na(party) %>%
-  filter( party  %in% c("DEMOCRAT", "REPUBLICAN")) %>%
-  rename(state = state_po)
+  filter(party  %in% c("DEMOCRAT", "REPUBLICAN")) 
+  
+
+#total votes for each party in each state 
+  
+totalvotes <- cleandata %>%
+  group_by(state, party) %>%
+  summarise(total = sum(candidatevotes)) %>%
+  slice(which.max(total))
+  
+
+totalvotes <- totalvotes[!(totalvotes$state == "ALASKA" | totalvotes$state== "HAWAII"),]    
+
+usmapp <- map_data("state")
+
+#it has to match state in map_data function
+
+totalvotes$state <- tolower(totalvotes$state)
+
+
+electiondf <- left_join(totalvotes, usmapp, by = c("state" = "region"))
+
+
+ggplot(data = electiondf, aes(x= long, y= lat, group = group, fill= party))+
+  geom_polygon(color= "black", size = 0.1) +
+    scale_fill_manual(values = c("DEMOCRAT" = "blue", "REPUBLICAN" = "red")) + # Set colors for parties
+  labs(title = "Party with Most Votes in Each State") +
+  theme_void()
+
+
+
+
+
+
+```
+
+```{r}
 
 #who won tht most votes in each state? 
+
+mostvotes <- totalvotes %>%
+    group_by(state) %>%
+    top_n(1,total) 
+
+#skipped Alaska and Hawaii because map_data functiom does not contain either
+
+
+mostvotes <- mostvotes[!(mostvotes$state== "ALASKA" | mostvotes$state== "HAWAII"),]
+
+#visualise it 
+
+ggplot(data = mostvotes, aes(x= state, y= total, fill= party)) +
+  geom_bar(stat = "identity", position = "dodge")
   
-mostvotes <- cleandata %>%
-  group_by(state, party) %>%
-  summarise( total = sum(totalvotes))
-  
-plott <- ggplot(data = mostvotes, mapping = aes(x =state, y= total, fill= party))+
-  geom_bar(stat = "identity", position = "dodge")+
-  theme(axis.text.x = element_text(angle = 60, vjust = 0.5, hjust =1))
-
-plott + theme(plot.margin = unit(c(0,-2,0,-2), "cm"))
-
-#states are overcrowdwed 
-#need ro adjust the x discrete scale
-
-
-
-
-
-
-
-
-
-
-
-
-         
 
 
 ```
