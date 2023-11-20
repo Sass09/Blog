@@ -1,13 +1,18 @@
-```{r}
+```{r message=FALSE}
 
 library(tidyverse)
 library(dplyr)
 library(ggplot2)
 
+suppressPackageStartupMessages({
+  library(tidyverse)
+  library(dplyr)
+  library(ggplot2)
+})
+
 tuesdata <- tidytuesdayR::tt_load('2023-11-07')
 
 house <-tuesdata$house
-
 
 
 
@@ -19,9 +24,10 @@ house <-tuesdata$house
 cleandata<-house %>%
  filter(stage == "GEN" & year== "2022") %>%
   select(state, stage, party, candidatevotes) %>%
-  drop_na(party) %>%
-  filter(party  %in% c("DEMOCRAT", "REPUBLICAN")) 
+  filter(party  %in% c("DEMOCRAT", "REPUBLICAN"))  %>%
+  na.omit()
   
+
 
 #total votes for each party in each state 
   
@@ -30,6 +36,7 @@ totalvotes <- cleandata %>%
   summarise(total = sum(candidatevotes)) %>%
   slice(which.max(total))
   
+
 
 totalvotes <- totalvotes[!(totalvotes$state == "ALASKA" | totalvotes$state== "HAWAII"),]    
 
@@ -58,11 +65,54 @@ ggplot(data = electiondf, aes(x= long, y= lat, group = group, fill= party))+
 
 ```{r}
 
+#which party dominated California over the years in GEN?
+
+#a dataframe with column for years and party
+
+cleandataforcali <- house %>%
+  select(state, year, party, stage,candidatevotes) %>%
+  na.omit() %>%
+  filter(stage== "GEN" & state == "CALIFORNIA") %>%
+  
+sumofcalivotes<- 
+  
+
+
+
+
+
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+```{r}
+
 #who won tht most votes in each state? 
 
 mostvotes <- totalvotes %>%
     group_by(state) %>%
     top_n(1,total) 
+
 
 #skipped Alaska and Hawaii because map_data functiom does not contain either
 
@@ -72,8 +122,9 @@ mostvotes <- mostvotes[!(mostvotes$state== "ALASKA" | mostvotes$state== "HAWAII"
 #visualise it 
 
 ggplot(data = mostvotes, aes(x= state, y= total, fill= party)) +
-  geom_bar(stat = "identity", position = "dodge")
+  geom_bar(stat = "identity", position = "dodge")+
+  theme(
+    axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5))
   
-
-
+  
 ```
