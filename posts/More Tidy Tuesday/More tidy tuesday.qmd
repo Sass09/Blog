@@ -37,7 +37,7 @@ totalvotes <- cleandata %>%
   summarise(total = sum(candidatevotes)) %>%
   slice(which.max(total))
  
-# mostvotes <- totalvotes %>%
+ #mostvotes <- totalvotes %>%
     #group_by(state) %>%
     #top_n(1,total) 
 
