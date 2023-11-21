@@ -1,3 +1,4 @@
+
 ```{r message=FALSE}
 
 library(tidyverse)
@@ -35,7 +36,11 @@ totalvotes <- cleandata %>%
   group_by(state, party) %>%
   summarise(total = sum(candidatevotes)) %>%
   slice(which.max(total))
-  
+ 
+# mostvotes <- totalvotes %>%
+    #group_by(state) %>%
+    #top_n(1,total) 
+
 
 
 totalvotes <- totalvotes[!(totalvotes$state == "ALASKA" | totalvotes$state== "HAWAII"),]    
@@ -65,20 +70,29 @@ ggplot(data = electiondf, aes(x= long, y= lat, group = group, fill= party))+
 
 ```{r}
 
-#which party dominated California over the years in GEN?
+#which party dominated California over the years in house general elections?
 
 #a dataframe with column for years and party
 
 cleandataforcali <- house %>%
   select(state, year, party, stage,candidatevotes) %>%
   na.omit() %>%
-  filter(stage== "GEN" & state == "CALIFORNIA") %>%
+  filter(stage== "GEN" & state == "CALIFORNIA") 
+
+#get sum of vvotes for each party  
+sumofcalivotes<- cleandataforcali %>%
+    group_by(year,state,party) %>%
+  summarise(total = sum(candidatevotes)) %>%
+   filter(party  %in% c("DEMOCRAT", "REPUBLICAN")) 
   
-sumofcalivotes<- 
-  
+#maxvotes 
+maxvotescal <- sumofcalivotes %>%
+  group_by(party) %>%
+  summarise(maxvotes= sum(total))
 
+dominantparty<- maxvotescal$party[which.max(maxvotescal$maxvotes)]
 
-
+print(paste("The dominating party is:", dominantparty))
 
 
 
@@ -105,26 +119,4 @@ sumofcalivotes<-
 
 
 
-```{r}
 
-#who won tht most votes in each state? 
-
-mostvotes <- totalvotes %>%
-    group_by(state) %>%
-    top_n(1,total) 
-
-
-#skipped Alaska and Hawaii because map_data functiom does not contain either
-
-
-mostvotes <- mostvotes[!(mostvotes$state== "ALASKA" | mostvotes$state== "HAWAII"),]
-
-#visualise it 
-
-ggplot(data = mostvotes, aes(x= state, y= total, fill= party)) +
-  geom_bar(stat = "identity", position = "dodge")+
-  theme(
-    axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5))
-  
-  
-```
